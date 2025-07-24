@@ -1,0 +1,138 @@
+.manufacturing-section {
+  padding: 60px 0;
+  background-color: #f8faf9;
+}
+.manufacturing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-header h2 {
+  font-size: 2.2rem;
+  color: #114b5f;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #1a936f;
+}
+.facility-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.facility-image {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.facility-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.facility-image:hover img {
+  transform: scale(1.03);
+}
+.facility-details {
+  flex: 1;
+  min-width: 300px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border-left: 3px solid #1a936f;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.feature-icon {
+  color: #1a936f;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+.feature-card h3 {
+  font-size: 1.1rem;
+  color: #114b5f;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+.certifications {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.cert-badge {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cert-badge i {
+  color: #1a936f;
+}
+.section-header h2,
+.facility-details p,
+.feature-card h3,
+.feature-card p,
+.cert-badge span {
+  color: #232323 !important;
+}
+.feature-icon,
+.cert-badge i {
+  color: #2563eb !important;
+}
+@media (max-width: 768px) {
+  .manufacturing-section {
+    padding: 40px 10px;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .facility-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+} 

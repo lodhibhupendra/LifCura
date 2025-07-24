@@ -1,0 +1,131 @@
+.research-section {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+.research-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.research-title {
+  font-size: 2.4rem;
+  color: #232323;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+.research-subtitle {
+  color: #6b7280;
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.research-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.research-img-col {
+  flex: 1 1 350px;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.research-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  background: #fff;
+  display: block;
+}
+.research-cards-col {
+  flex: 1 1 350px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+.research-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid #d1e7dd;
+  box-shadow: 0 4px 16px rgba(34,197,94,0.07);
+  padding: 24px 28px;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+.research-card:hover {
+  box-shadow: 0 8px 32px rgba(34,197,94,0.13);
+  border-color: #1a936f;
+  transform: translateY(-4px) scale(1.02);
+}
+.research-card-icon {
+  font-size: 1.7rem;
+  color: #1a936f;
+  margin-top: 4px;
+  min-width: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.research-card-content h3 {
+  font-size: 1.18rem;
+  color: #17624b;
+  font-weight: 700;
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+.research-card-content p {
+  color: #232323;
+  font-size: 1.01rem;
+  margin: 0;
+  line-height: 1.6;
+}
+.research-title,
+.research-subtitle,
+.research-card h3,
+.research-card p {
+  color: #232323 !important;
+}
+.research-card-icon i {
+  color: #2563eb !important;
+}
+@media (max-width: 900px) {
+  .research-flex {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+  .research-img-col, .research-cards-col {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .research-title {
+    font-size: 1.3rem;
+  }
+  .research-card {
+    padding: 14px 10px;
+    gap: 10px;
+  }
+  .research-card-content h3 {
+    font-size: 1rem;
+  }
+  .research-card-content p {
+    font-size: 0.95rem;
+  }
+} 
