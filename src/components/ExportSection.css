@@ -1,0 +1,260 @@
+:root {
+    --primary: #1a936f;
+    --primary-dark: #114b5f;
+    --accent: #88d498;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.export-section {
+    padding: 100px 0;
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    color: var(--primary-dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease;
+}
+
+.section-title.animated h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+}
+
+.export-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+}
+
+.export-image {
+    flex: 1;
+    min-width: 350px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.3s ease 0.05s;
+}
+
+.export-image.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.export-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: all 0.5s ease;
+    border: 5px solid var(--white);
+}
+
+.export-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.countries-grid {
+    flex: 1;
+    min-width: 350px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.countries-grid.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.countries-title {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+}
+
+.countries-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 80%;
+    width: 5px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    border-radius: 5px;
+}
+
+.country-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+.country-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.country-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.country-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, var(--white), #f0f8f5);
+}
+
+.country-item.india {
+    border: 2px solid #ff9933;
+    background: linear-gradient(135deg, #f5f5f5, #fff5f5);
+    position: relative;
+    overflow: hidden;
+}
+
+.country-item.india::after {
+    content: 'Made in India';
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    background: #ff9933;
+    color: white;
+    padding: 3px 30px;
+    font-size: 0.7rem;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.country-flag {
+    width: 35px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.country-item:hover .country-flag {
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.country-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.export-stats {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease 0.15s;
+}
+
+.export-stats.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.export-stats i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+    .section-title h2 {
+        font-size: 2.4rem;
+    }
+    .export-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .export-content {
+        flex-direction: column;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .export-image, .countries-grid {
+        min-width: 100%;
+    }
+    .country-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    .country-list {
+        grid-template-columns: 1fr 1fr;
+    }
+} 

@@ -1,586 +1,1087 @@
+import zenatcImg from '../assets/ProductsImg/zenatc-150.jpeg';
+
 // ✅ Export the array so it can be used elsewhere
 export const medicalProducts = [
+  // Gynae (Gynecology)
   {
     id: 1,
-    name: 'Syringes',
-    section: 'General Medical Equipment',
-    description: 'Sterile disposable syringes in all sizes',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    name: "Dydrogesterone (Duphaston)",
+    strength: "10 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Dydrogesterone (Duphaston) 10 mg Tablet",
+    image: zenatcImg,
     inStock: true,
-    price: 25
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 2,
-    name: 'Blood Pressure Monitor',
-    section: 'General Medical Equipment',
-    description: 'Digital blood pressure monitor with adjustable cuff',
-    image: 'https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    name: "Progesterone (Susten)",
+    strength: "200 mg",
+    form: "Softgel/Injection",
+    section: "Gynecology",
+    description: "Progesterone (Susten) 200 mg Softgel/Injection",
+    image: zenatcImg,
     inStock: true,
-    price: 400000
+    price: 0,
+    category: "Softgel/Injection"
   },
   {
     id: 3,
-    name: 'Stethoscope',
-    section: 'General Medical Equipment',
-    description: 'Professional dual-head stethoscope',
-    image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    category: 'Diagnostic',
-    price: 0
+    name: "Folic Acid",
+    strength: "5 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Folic Acid 5 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 4,
-    name: 'Anaesthesia Machine',
-    section: 'Anaesthesiology',
-    description: 'Modern anaesthesia delivery system with vaporizers',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    note: 'Includes all accessories',
-    price: 0
+    name: "Ferrous Ascorbate + Folic Acid",
+    strength: "100 mg + 1.5 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Ferrous Ascorbate + Folic Acid 100 mg + 1.5 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 5,
-    name: 'ECG Machine',
-    section: 'Cardiology',
-    description: '12-lead electrocardiogram machine with printer',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    name: "Levonorgestrel + Ethinylestradiol (Ovral L)",
+    strength: "0.15 mg + 0.03 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Levonorgestrel + Ethinylestradiol (Ovral L) 0.15 mg + 0.03 mg Tablet",
+    image: zenatcImg,
     inStock: true,
-    price: 0
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 6,
-    name: 'Patient Monitor',
-    section: 'General Medical Equipment',
-    description: 'Multi-parameter vital signs monitor',
-    image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    category: 'Monitoring',
-    price: 0
+    name: "Letrozole",
+    strength: "2.5 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Letrozole 2.5 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 7,
-    name: 'Surgical Lights',
-    section: 'Surgery',
-    description: 'LED surgical lighting system with adjustable intensity',
-    image: 'https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    price: 0
+    name: "Clomiphene Citrate",
+    strength: "50 mg / 100 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Clomiphene Citrate 50 mg / 100 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
   },
   {
     id: 8,
-    name: 'Ultrasound Machine',
-    section: 'Radiology',
-    description: 'Portable diagnostic ultrasound system',
-    image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    category: 'Imaging',
-    price: 0
+    name: "Medroxyprogesterone (Deviry)",
+    strength: "10 mg",
+    form: "Tablet",
+    section: "Gynecology",
+    description: "Medroxyprogesterone (Deviry) 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 9,
+    name: "M2 Tone",
+    strength: "",
+    form: "Syrup",
+    section: "Gynecology",
+    description: "M2 Tone Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Syrup"
   },
 
-  
-    {
-      id: 9,
-      name: "Syringes, cannulas, and needles",
-      section: "General Medical Equipment",
-      description: "Syringes, cannulas, and needles – all sizes and types; including kits",
-      category: "General",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,syringes",
-      price: 0
-    },
-    {
-      id: 10,
-      name: "Catheters",
-      section: "General Medical Equipment",
-      description: "Catheters – all sizes and types; including kits",
-      category: "General",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,catheters",
-      price: 0
-    },
-    {
-      id: 11,
-      name: "Coils, guidewire",
-      section: "General Medical Equipment",
-      description: "Coils, guidewire",
-      category: "General",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,coils",
-      price: 0
-    },
-    {
-      id: 12,
-      name: "Guidewires, all",
-      section: "General Medical Equipment",
-      description: "Guidewires, all",
-      category: "General",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,guidewires",
-      price: 0
-    },
-    {
-      id: 13,
-      name: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-      section: "General Medical Equipment",
-      description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-      category: "General",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,medical",
-      price: 0
-    },
-    {
-      id: 14,
-      name: "bhupendra",
-      section: "New",
-      description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-      category: "bhupendra",
-      inStock: true,
-      image: "https://source.unsplash.com/400x300/?medical,medical",
-      price: 0
-    },
-
-    {
-      id: 15,
-      name: 'New Product',
-      section: 'New', // नई कैटेगरी
-      description: 'Description here  dw wewrw rerw e546456grtfg fg f h dsvdfhgh fgh fdfsgdfgh fgh df ds fdsfgfgfvgdsfdh',
-      category: "bhupendra",
-      image: 'image-url.jpg',
-      inStock: true,
-      price: 0
-    },
-
-    {
-      id: 16,
-      name: 'Syringes',
-      section: 'General Medical Equipment',
-      description: 'Sterile disposable syringes in all sizes',
-      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      inStock: true,
-      price: 0
-    },
-    {
-      id: 17,
-      name: 'Blood Pressure Monitor',
-      section: 'General Medical Equipment',
-      description: 'Digital blood pressure monitor with adjustable cuff',
-      image: 'https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      inStock: true,
-      price: 0
-    },
-    {
-      id: 18,
-      name: 'Stethoscope',
-      section: 'General Medical Equipment',
-      description: 'Professional dual-head stethoscope',
-      image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      category: 'Diagnostic',
-      price: 0
-    },
-    {
-      id: 19,
-      name: 'Anaesthesia Machine',
-      section: 'Anaesthesiology',
-      description: 'Modern anaesthesia delivery system with vaporizers',
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      note: 'Includes all accessories',
-      price: 0
-    },
-    {
-      id: 20,
-      name: 'ECG Machine',
-      section: 'Cardiology',
-      description: '12-lead electrocardiogram machine with printer',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      inStock: true,
-      price: 0
-    },
-    {
-      id: 21,
-      name: 'Patient Monitor',
-      section: 'General Medical Equipment',
-      description: 'Multi-parameter vital signs monitor',
-      image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      category: 'Monitoring',
-      price: 0
-    },
-    {
-      id: 22,
-      name: 'Surgical Lights',
-      section: 'Surgery',
-      description: 'LED surgical lighting system with adjustable intensity',
-      image: 'https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      price: 0
-    },
-    {
-      id: 23,
-      name: 'Ultrasound Machine',
-      section: 'Radiology',
-      description: 'Portable diagnostic ultrasound system',
-      image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      category: 'Imaging',
-      price: 0
-    },
-  
-    
-      {
-        id: 24,
-        name: "Syringes, cannulas, and needles",
-        section: "General Medical Equipment",
-        description: "Syringes, cannulas, and needles – all sizes and types; including kits",
-        category: "General",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,syringes",
-        price: 0
-      },
-      {
-        id: 25,
-        name: "Catheters",
-        section: "General Medical Equipment",
-        description: "Catheters – all sizes and types; including kits",
-        category: "General",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,catheters",
-        price: 0
-      },
-      {
-        id: 26,
-        name: "Coils, guidewire",
-        section: "General Medical Equipment",
-        description: "Coils, guidewire",
-        category: "General",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,coils",
-        price: 0
-      },
-      {
-        id: 27,
-        name: "Guidewires, all",
-        section: "General Medical Equipment",
-        description: "Guidewires, all",
-        category: "General",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,guidewires",
-        price: 5000
-      },
-      {
-        id: 28,
-        name: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-        section: "General Medical Equipment",
-        description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-        category: "General",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,medical",
-        price: 200
-      },
-      {
-        id: 29,
-        name: "bhupendra",
-        section: "New",
-        description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-        category: "bhupendra",
-        inStock: true,
-        image: "https://source.unsplash.com/400x300/?medical,medical",
-        price: 0
-      },
-  
-      {
-        id: 30,
-        name: 'New Product',
-        section: 'New', // नई कैटेगरी
-        description: 'Description here  dw wewrw rerw e546456grtfg fg f h dsvdfhgh fgh fdfsgdfgh fgh df ds fdsfgfgfvgdsfdh',
-        category: "bhupendra",
-        image: 'image-url.jpg',
-        inStock: true,
-        price: 0
-      },
-
-      {
-        id: 31,
-        name: 'Syringes',
-        section: 'General Medical Equipment',
-        description: 'Sterile disposable syringes in all sizes',
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        inStock: true,
-        price: 25
-      },
-      {
-        id: 32,
-        name: 'Blood Pressure Monitor',
-        section: 'General Medical Equipment',
-        description: 'Digital blood pressure monitor with adjustable cuff',
-        image: 'https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        inStock: true,
-        price: 400000
-      },
-      {
-        id: 33,
-        name: 'Stethoscope',
-        section: 'General Medical Equipment',
-        description: 'Professional dual-head stethoscope',
-        image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        category: 'Diagnostic',
-        price: 0
-      },
-      {
-        id: 34,
-        name: 'Anaesthesia Machine',
-        section: 'Anaesthesiology',
-        description: 'Modern anaesthesia delivery system with vaporizers',
-        image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        note: 'Includes all accessories',
-        price: 0
-      },
-      {
-        id: 35,
-        name: 'ECG Machine',
-        section: 'Cardiology',
-        description: '12-lead electrocardiogram machine with printer',
-        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        inStock: true,
-        price: 0
-      },
-      {
-        id: 36,
-        name: 'Patient Monitor',
-        section: 'General Medical Equipment',
-        description: 'Multi-parameter vital signs monitor',
-        image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        category: 'Monitoring',
-        price: 0
-      },
-      {
-        id: 37,
-        name: 'Surgical Lights',
-        section: 'Surgery',
-        description: 'LED surgical lighting system with adjustable intensity',
-        image: 'https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        price: 0
-      },
-      {
-        id: 38,
-        name: 'Ultrasound Machine',
-        section: 'Radiology',
-        description: 'Portable diagnostic ultrasound system',
-        image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-        category: 'Imaging',
-        price: 0
-      },
-    
-      
-        {
-          id: 39,
-          name: "Syringes, cannulas, and needles",
-          section: "General Medical Equipment",
-          description: "Syringes, cannulas, and needles – all sizes and types; including kits",
-          category: "General",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,syringes",
-          price: 0
-        },
-        {
-          id: 40,
-          name: "Catheters",
-          section: "General Medical Equipment",
-          description: "Catheters – all sizes and types; including kits",
-          category: "General",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,catheters",
-          price: 0
-        },
-        {
-          id: 41,
-          name: "Coils, guidewire",
-          section: "General Medical Equipment",
-          description: "Coils, guidewire",
-          category: "General",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,coils",
-          price: 0
-        },
-        {
-          id: 42,
-          name: "Guidewires, all",
-          section: "General Medical Equipment",
-          description: "Guidewires, all",
-          category: "General",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,guidewires",
-          price: 0
-        },
-        {
-          id: 43,
-          name: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-          section: "General Medical Equipment",
-          description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-          category: "General",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,medical",
-          price: 0
-        },
-        {
-          id: 44,
-          name: "bhupendra",
-          section: "New",
-          description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-          category: "bhupendra",
-          inStock: true,
-          image: "https://source.unsplash.com/400x300/?medical,medical",
-          price: 0
-        },
-    
-        {
-          id: 45,
-          name: 'New Product',
-          section: 'New', // नई कैटेगरी
-          description: 'Description here  dw wewrw rerw e546456grtfg fg f h dsvdfhgh fgh fdfsgdfgh fgh df ds fdsfgfgfvgdsfdh',
-          category: "bhupendra",
-          image: 'image-url.jpg',
-          inStock: true,
-          price: 0
-        },
-    
-        {
-          id: 46,
-          name: 'Syringes',
-          section: 'General Medical Equipment',
-          description: 'Sterile disposable syringes in all sizes',
-          image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          inStock: true,
-          price: 0
-        },
-        {
-          id: 47,
-          name: 'Blood Pressure Monitor',
-          section: 'General Medical Equipment',
-          description: 'Digital blood pressure monitor with adjustable cuff',
-          image: 'https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          inStock: true,
-          price: 0
-        },
-        {
-          id: 48,
-          name: 'Stethoscope',
-          section: 'General Medical Equipment',
-          description: 'Professional dual-head stethoscope',
-          image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          category: 'Diagnostic',
-          price: 0
-        },
-        {
-          id: 49,
-          name: 'Anaesthesia Machine',
-          section: 'Anaesthesiology',
-          description: 'Modern anaesthesia delivery system with vaporizers',
-          image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          note: 'Includes all accessories',
-          price: 0
-        },
-        {
-          id: 50,
-          name: 'ECG Machine',
-          section: 'Cardiology',
-          description: '12-lead electrocardiogram machine with printer',
-          image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          inStock: true,
-          price: 0
-        },
-        {
-          id: 51,
-          name: 'Patient Monitor',
-          section: 'General Medical Equipment',
-          description: 'Multi-parameter vital signs monitor',
-          image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          category: 'Monitoring',
-          price: 0
-        },
-        {
-          id: 52,
-          name: 'Surgical Lights',
-          section: 'Surgery',
-          description: 'LED surgical lighting system with adjustable intensity',
-          image: 'https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          price: 0
-        },
-        {
-          id: 53,
-          name: 'Ultrasound Machine',
-          section: 'Radiology',
-          description: 'Portable diagnostic ultrasound system',
-          image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-          category: 'Imaging',
-          price: 0
-        },
-      
-        
-          {
-            id: 54,
-            name: "Syringes, cannulas, and needles",
-            section: "General Medical Equipment",
-            description: "Syringes, cannulas, and needles – all sizes and types; including kits",
-            category: "General",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,syringes",
-            price: 0
-          },
-          {
-            id: 55,
-            name: "Catheters",
-            section: "General Medical Equipment",
-            description: "Catheters – all sizes and types; including kits",
-            category: "General",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,catheters",
-            price: 0
-          },
-          {
-            id: 56,
-            name: "Coils, guidewire",
-            section: "General Medical Equipment",
-            description: "Coils, guidewire",
-            category: "General",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,coils",
-            price: 0
-          },
-          {
-            id: 57,
-            name: "Guidewires, all",
-            section: "General Medical Equipment",
-            description: "Guidewires, all",
-            category: "General",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,guidewires",
-            price: 5000
-          },
-          {
-            id: 58,
-            name: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-            section: "General Medical Equipment",
-            description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-            category: "General",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,medical",
-            price: 200
-          },
-          {
-            id: 59,
-            name: "bhupendra",
-            section: "New",
-            description: "Medical tubing or hoses less than 2” diameter; including associated adaptors, connectors,",
-            category: "bhupendra",
-            inStock: true,
-            image: "https://source.unsplash.com/400x300/?medical,medical",
-            price: 0
-          },
-      
-          {
-            id: 60,
-            name: 'New Product',
-            section: 'New', // नई कैटेगरी
-            description: 'Description here  dw wewrw rerw e546456grtfg fg f h dsvdfhgh fgh fdfsgdfgh fgh df ds fdsfgfgfvgdsfdh',
-            category: "bhupendra",
-            image: 'image-url.jpg',
-            inStock: true,
-            price: 0
-          },
-    // ...more items...
-  ];
+  // Neuro / Psychiatry (CNS)
+  {
+    id: 10,
+    name: "Clonazepam + Escitalopram",
+    strength: "0.5 mg + 10 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Clonazepam + Escitalopram 0.5 mg + 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 11,
+    name: "Gabapentin + Methylcobalamin",
+    strength: "300 mg + 500 mcg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Gabapentin + Methylcobalamin 300 mg + 500 mcg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 12,
+    name: "Pregabalin",
+    strength: "75 mg / 150 mg",
+    form: "Capsule",
+    section: "Neuro / Psychiatry",
+    description: "Pregabalin 75 mg / 150 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 13,
+    name: "Sertraline",
+    strength: "50 mg / 100 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Sertraline 50 mg / 100 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 14,
+    name: "Clobazam",
+    strength: "10 mg / 20 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Clobazam 10 mg / 20 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 15,
+    name: "Amitriptyline",
+    strength: "10 mg / 25 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Amitriptyline 10 mg / 25 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 16,
+    name: "Sodium Valproate + Valproic Acid",
+    strength: "200 mg / 300 mg",
+    form: "Tablet/Syrup",
+    section: "Neuro / Psychiatry",
+    description: "Sodium Valproate + Valproic Acid 200 mg / 300 mg Tablet/Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet/Syrup"
+  },
+  {
+    id: 17,
+    name: "Aripiprazole",
+    strength: "10 mg / 15 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Aripiprazole 10 mg / 15 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 18,
+    name: "Olanzapine",
+    strength: "5 mg / 10 mg",
+    form: "Tablet",
+    section: "Neuro / Psychiatry",
+    description: "Olanzapine 5 mg / 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 19,
+    name: "Cholecalciferol (Calcirol)",
+    strength: "60,000 IU",
+    form: "Sachet",
+    section: "Orthopedic",
+    description: "Cholecalciferol (Calcirol) 60,000 IU Sachet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Sachet"
+  },
+  {
+    id: 20,
+    name: "Calcium + Vitamin D3 (Shelcal)",
+    strength: "500 mg + 250 IU",
+    form: "Tablet",
+    section: "Orthopedic",
+    description: "Calcium + Vitamin D3 (Shelcal) 500 mg + 250 IU Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 21,
+    name: "Etoricoxib (Nucoxia)",
+    strength: "60 mg / 90 mg / 120 mg",
+    form: "Tablet",
+    section: "Orthopedic",
+    description: "Etoricoxib (Nucoxia) 60 mg / 90 mg / 120 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 22,
+    name: "Aceclofenac + Paracetamol",
+    strength: "100 mg + 325 mg",
+    form: "Tablet",
+    section: "Orthopedic",
+    description: "Aceclofenac + Paracetamol 100 mg + 325 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 23,
+    name: "Alendronate Sodium",
+    strength: "70 mg",
+    form: "Tablet",
+    section: "Orthopedic",
+    description: "Alendronate Sodium 70 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 24,
+    name: "Diclofenac (Dynapar AQ)",
+    strength: "75 mg / 1 ml",
+    form: "Injection",
+    section: "Orthopedic",
+    description: "Diclofenac (Dynapar AQ) 75 mg / 1 ml Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  {
+    id: 25,
+    name: "Glucosamine + Chondroitin",
+    strength: "500 mg + 400 mg",
+    form: "Tablet",
+    section: "Orthopedic",
+    description: "Glucosamine + Chondroitin 500 mg + 400 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  // Cardiac
+  {
+    id: 26,
+    name: "Telmisartan",
+    strength: "40 mg / 80 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Telmisartan 40 mg / 80 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 27,
+    name: "Amlodipine",
+    strength: "5 mg / 10 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Amlodipine 5 mg / 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 28,
+    name: "Atenolol",
+    strength: "25 mg / 50 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Atenolol 25 mg / 50 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 29,
+    name: "Rosuvastatin",
+    strength: "10 mg / 20 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Rosuvastatin 10 mg / 20 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 30,
+    name: "Atorvastatin",
+    strength: "10 mg / 20 mg / 40 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Atorvastatin 10 mg / 20 mg / 40 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 31,
+    name: "Losartan",
+    strength: "50 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Losartan 50 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 32,
+    name: "Clopidogrel + Aspirin",
+    strength: "75 mg + 75 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Clopidogrel + Aspirin 75 mg + 75 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 33,
+    name: "Metoprolol (Succinate)",
+    strength: "25 mg / 50 mg / 100 mg",
+    form: "Tablet",
+    section: "Cardiac",
+    description: "Metoprolol (Succinate) 25 mg / 50 mg / 100 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  // Diabetes
+  {
+    id: 34,
+    name: "Metformin",
+    strength: "500 mg / 1000 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Metformin 500 mg / 1000 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 35,
+    name: "Glimepiride",
+    strength: "1 mg / 2 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Glimepiride 1 mg / 2 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 36,
+    name: "Teneligliptin",
+    strength: "20 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Teneligliptin 20 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 37,
+    name: "Dapagliflozin",
+    strength: "10 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Dapagliflozin 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 38,
+    name: "Sitagliptin",
+    strength: "50 mg / 100 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Sitagliptin 50 mg / 100 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 39,
+    name: "Vildagliptin + Metformin",
+    strength: "50 mg + 500 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Vildagliptin + Metformin 50 mg + 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 40,
+    name: "Insulin (Regular / Glargine)",
+    strength: "40 IU / ml",
+    form: "Injection",
+    section: "Diabetes",
+    description: "Insulin (Regular / Glargine) 40 IU / ml Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  {
+    id: 41,
+    name: "Voglibose",
+    strength: "0.2 mg / 0.3 mg",
+    form: "Tablet",
+    section: "Diabetes",
+    description: "Voglibose 0.2 mg / 0.3 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  // Gastro (Gastroenterology)
+  {
+    id: 42,
+    name: "Pantoprazole",
+    strength: "40 mg",
+    form: "Tablet / Injection",
+    section: "Gastroenterology",
+    description: "Pantoprazole 40 mg Tablet / Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet / Injection"
+  },
+  {
+    id: 43,
+    name: "Rabeprazole + Domperidone",
+    strength: "20 mg + 30 mg",
+    form: "Capsule",
+    section: "Gastroenterology",
+    description: "Rabeprazole + Domperidone 20 mg + 30 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 44,
+    name: "Esomeprazole",
+    strength: "40 mg",
+    form: "Tablet",
+    section: "Gastroenterology",
+    description: "Esomeprazole 40 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 45,
+    name: "Sucralfate + Oxetacaine",
+    strength: "1 gm + 10 mg / 5 ml",
+    form: "Syrup",
+    section: "Gastroenterology",
+    description: "Sucralfate + Oxetacaine 1 gm + 10 mg / 5 ml Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Syrup"
+  },
+  {
+    id: 46,
+    name: "Digestive Enzyme",
+    strength: "50 mg + 10 mg / 5 ml",
+    form: "Syrup",
+    section: "Gastroenterology",
+    description: "Digestive Enzyme 50 mg + 10 mg / 5 ml Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Syrup"
+  },
+  {
+    id: 47,
+    name: "Lactulose",
+    strength: "10 gm / 15 ml",
+    form: "Syrup",
+    section: "Gastroenterology",
+    description: "Lactulose 10 gm / 15 ml Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Syrup"
+  },
+  {
+    id: 48,
+    name: "Ondansetron",
+    strength: "4 mg / 8 mg",
+    form: "Tablet / Injection",
+    section: "Gastroenterology",
+    description: "Ondansetron 4 mg / 8 mg Tablet / Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet / Injection"
+  },
+  {
+    id: 49,
+    name: "Domperidone",
+    strength: "10 mg",
+    form: "Tablet",
+    section: "Gastroenterology",
+    description: "Domperidone 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  // Derma (Dermatology)
+  {
+    id: 50,
+    name: "Clobetasol Propionate",
+    strength: "0.05%",
+    form: "Cream",
+    section: "Dermatology",
+    description: "Clobetasol Propionate 0.05% Cream",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Cream"
+  },
+  {
+    id: 51,
+    name: "Ketoconazole",
+    strength: "2%",
+    form: "Shampoo",
+    section: "Dermatology",
+    description: "Ketoconazole 2% Shampoo",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Shampoo"
+  },
+  {
+    id: 52,
+    name: "Permethrin",
+    strength: "5%",
+    form: "Lotion",
+    section: "Dermatology",
+    description: "Permethrin 5% Lotion",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Lotion"
+  },
+  {
+    id: 53,
+    name: "Terbinafine",
+    strength: "250 mg",
+    form: "Tablet",
+    section: "Dermatology",
+    description: "Terbinafine 250 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 54,
+    name: "Itraconazole",
+    strength: "100 mg / 200 mg",
+    form: "Capsule",
+    section: "Dermatology",
+    description: "Itraconazole 100 mg / 200 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 55,
+    name: "Clindamycin + Nicotinamide",
+    strength: "1% + 4%",
+    form: "Gel",
+    section: "Dermatology",
+    description: "Clindamycin + Nicotinamide 1% + 4% Gel",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Gel"
+  },
+  {
+    id: 56,
+    name: "Adapalene + Benzoyl Peroxide",
+    strength: "0.1% + 2.5%",
+    form: "Gel",
+    section: "Dermatology",
+    description: "Adapalene + Benzoyl Peroxide 0.1% + 2.5% Gel",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Gel"
+  },
+  {
+    id: 57,
+    name: "Mupirocin",
+    strength: "2%",
+    form: "Ointment",
+    section: "Dermatology",
+    description: "Mupirocin 2% Ointment",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Ointment"
+  },
+  {
+    id: 58,
+    name: "Hydroquinone + Tretinoin + Mometasone",
+    strength: "2% + 0.05% + 0.1%",
+    form: "Cream",
+    section: "Dermatology",
+    description: "Hydroquinone + Tretinoin + Mometasone 2% + 0.05% + 0.1% Cream",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Cream"
+  },
+  // Urology / Nephrology
+  {
+    id: 59,
+    name: "Tamsulosin",
+    strength: "0.4 mg",
+    form: "Capsule",
+    section: "Urology / Nephrology",
+    description: "Tamsulosin 0.4 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 60,
+    name: "Finasteride",
+    strength: "1 mg / 5 mg",
+    form: "Tablet",
+    section: "Urology / Nephrology",
+    description: "Finasteride 1 mg / 5 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 61,
+    name: "Dutasteride",
+    strength: "0.5 mg",
+    form: "Capsule",
+    section: "Urology / Nephrology",
+    description: "Dutasteride 0.5 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 62,
+    name: "Furosemide",
+    strength: "40 mg",
+    form: "Tablet",
+    section: "Urology / Nephrology",
+    description: "Furosemide 40 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 63,
+    name: "Tolterodine",
+    strength: "2 mg / 4 mg",
+    form: "Tablet",
+    section: "Urology / Nephrology",
+    description: "Tolterodine 2 mg / 4 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 64,
+    name: "Potassium Citrate",
+    strength: "1100 mg / 5 ml",
+    form: "Syrup",
+    section: "Urology / Nephrology",
+    description: "Potassium Citrate 1100 mg / 5 ml Syrup",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Syrup"
+  },
+  {
+    id: 65,
+    name: "Solifenacin",
+    strength: "5 mg / 10 mg",
+    form: "Tablet",
+    section: "Urology / Nephrology",
+    description: "Solifenacin 5 mg / 10 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  // Antibiotics
+  {
+    id: 66,
+    name: "Amoxicillin + Clavulanic Acid",
+    strength: "500 mg + 125 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Amoxicillin + Clavulanic Acid 500 mg + 125 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 67,
+    name: "Azithromycin",
+    strength: "250 mg / 500 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Azithromycin 250 mg / 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 68,
+    name: "Cefixime",
+    strength: "200 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Cefixime 200 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 69,
+    name: "Cefpodoxime",
+    strength: "200 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Cefpodoxime 200 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 70,
+    name: "Levofloxacin",
+    strength: "500 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Levofloxacin 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 71,
+    name: "Ciprofloxacin",
+    strength: "500 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Ciprofloxacin 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 72,
+    name: "Ceftriaxone",
+    strength: "1 gm",
+    form: "Injection",
+    section: "Antibiotics",
+    description: "Ceftriaxone 1 gm Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  {
+    id: 73,
+    name: "Linezolid",
+    strength: "600 mg",
+    form: "Tablet / Injection",
+    section: "Antibiotics",
+    description: "Linezolid 600 mg Tablet / Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet / Injection"
+  },
+  {
+    id: 74,
+    name: "Metronidazole",
+    strength: "400 mg / 500 mg",
+    form: "Tablet",
+    section: "Antibiotics",
+    description: "Metronidazole 400 mg / 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 75,
+    name: "Doxycycline",
+    strength: "100 mg",
+    form: "Capsule",
+    section: "Antibiotics",
+    description: "Doxycycline 100 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  // Antiviral
+  {
+    id: 76,
+    name: "Acyclovir",
+    strength: "400 mg / 800 mg",
+    form: "Tablet",
+    section: "Antiviral",
+    description: "Acyclovir 400 mg / 800 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 77,
+    name: "Valacyclovir",
+    strength: "500 mg / 1000 mg",
+    form: "Tablet",
+    section: "Antiviral",
+    description: "Valacyclovir 500 mg / 1000 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 78,
+    name: "Oseltamivir",
+    strength: "75 mg",
+    form: "Capsule",
+    section: "Antiviral",
+    description: "Oseltamivir 75 mg Capsule",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 79,
+    name: "Favipiravir",
+    strength: "200 mg / 400 mg",
+    form: "Tablet",
+    section: "Antiviral",
+    description: "Favipiravir 200 mg / 400 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 80,
+    name: "Tenofovir",
+    strength: "300 mg",
+    form: "Tablet",
+    section: "Antiviral",
+    description: "Tenofovir 300 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 81,
+    name: "Remdesivir",
+    strength: "100 mg / vial",
+    form: "Injection",
+    section: "Antiviral",
+    description: "Remdesivir 100 mg / vial Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  // Oncology (Cancer)
+  {
+    id: 82,
+    name: "Letrozole",
+    strength: "2.5 mg",
+    form: "Tablet",
+    section: "Oncology",
+    description: "Letrozole 2.5 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 83,
+    name: "Anastrozole",
+    strength: "1 mg",
+    form: "Tablet",
+    section: "Oncology",
+    description: "Anastrozole 1 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 84,
+    name: "Tamoxifen",
+    strength: "10 mg / 20 mg",
+    form: "Tablet",
+    section: "Oncology",
+    description: "Tamoxifen 10 mg / 20 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 85,
+    name: "Capecitabine",
+    strength: "500 mg",
+    form: "Tablet",
+    section: "Oncology",
+    description: "Capecitabine 500 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 86,
+    name: "Imatinib",
+    strength: "400 mg",
+    form: "Tablet",
+    section: "Oncology",
+    description: "Imatinib 400 mg Tablet",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 87,
+    name: "Paclitaxel",
+    strength: "100 mg / vial",
+    form: "Injection",
+    section: "Oncology",
+    description: "Paclitaxel 100 mg / vial Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  {
+    id: 88,
+    name: "Doxorubicin",
+    strength: "50 mg / vial",
+    form: "Injection",
+    section: "Oncology",
+    description: "Doxorubicin 50 mg / vial Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  },
+  {
+    id: 89,
+    name: "Cisplatin",
+    strength: "50 mg / vial",
+    form: "Injection",
+    section: "Oncology",
+    description: "Cisplatin 50 mg / vial Injection",
+    image: zenatcImg,
+    inStock: true,
+    price: 0,
+    category: "Injection"
+  }
+];
   
 
 

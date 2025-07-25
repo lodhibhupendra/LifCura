@@ -552,6 +552,16 @@ body {
     border: 1.5px solid #4361ee;
     box-shadow: 0 4px 16px #4895ef33;
   }
+  /* Modal responsive fix */
+  .ReactModal__Content {
+    width: 95vw !important;
+    max-width: 98vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    padding: 1.2rem 0.7rem !important;
+    border-radius: 18px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -567,12 +577,44 @@ body {
   
   .products-grid {
     grid-template-columns: 1fr;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
   }
   .product-card {
     min-height: 260px;
     border-radius: 10px;
+    margin-bottom: 1rem;
   }
   .product-image-container, .product-image-container img {
     border-radius: 10px 10px 0 0;
+  }
+}
+
+/* --- Responsive Fixes for Mobile Card Visibility --- */
+@media (max-width: 600px) {
+  .product-app-container {
+    padding: 4px !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 1rem 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box;
   }
 }

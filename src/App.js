@@ -10,6 +10,7 @@ import ProductCard from './pages/ProductCard';
 import { medicalProducts } from './data/medicalProductsData';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ExportSection from './components/ExportSection';
 
 function App() {
   return (
@@ -50,8 +51,10 @@ function App() {
         <TherapySection />
         <ManufacturingSection />
         <ResearchSection />
+        <ExportSection />
         <ProductCard products={medicalProducts} />
         <ContactSection />
+        
         <Footer />
         
         
