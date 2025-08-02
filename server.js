@@ -34,8 +34,8 @@ app.post('/api/send-email', async (req, res) => {
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: process.env.SMTP_USER || "932ea5002@smtp-brevo.com",
-        pass: process.env.SMTP_PASS || "xsmtpsib-609b6171fddb3825fe6a7ccda01c8d4b2a41e642bda9f5d4f9871267bbc490f9-NY1nO4rtUAPRwEaI",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 

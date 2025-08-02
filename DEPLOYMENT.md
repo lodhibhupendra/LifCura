@@ -15,8 +15,8 @@ This guide explains how to deploy the LifCura React application with email funct
 3. Add the following variables:
 
 ```
-SMTP_USER = 932ea5002@smtp-brevo.com
-SMTP_PASS = xsmtpsib-609b6171fddb3825fe6a7ccda01c8d4b2a41e642bda9f5d4f9871267bbc490f9-NY1nO4rtUAPRwEaI
+SMTP_USER = your_brevo_smtp_user
+SMTP_PASS = your_brevo_smtp_password
 ```
 
 ### For Local Development:

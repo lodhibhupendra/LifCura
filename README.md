@@ -39,8 +39,8 @@ Expected response: `{"success":true,"message":"Email sent successfully"}`
 In your Vercel dashboard, add these environment variables:
 
 ```
-SMTP_USER = 932ea5002@smtp-brevo.com
-SMTP_PASS = xsmtpsib-609b6171fddb3825fe6a7ccda01c8d4b2a41e642bda9f5d4f9871267bbc490f9-NY1nO4rtUAPRwEaI
+SMTP_USER = your_brevo_smtp_user
+SMTP_PASS = your_brevo_smtp_password
 ```
 
 ### Step 2: Deploy
