@@ -31,18 +31,48 @@ export const createOrganizationStructuredData = () => {
     "url": "https://lifcura.com",
     "logo": "https://lifcura.com/iconlifcura.png",
     "description": "Leading manufacturer and exporter of high-quality medical products, therapeutic solutions, and healthcare equipment.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "email": "info@lifcura.com"
-    },
+    "foundingDate": "2020",
+    "industry": "Healthcare & Medical Equipment",
+    "numberOfEmployees": "50-100",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "info@lifcura.com",
+        "telephone": "+91-XXXXXXXXXX",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "Sales",
+        "email": "sales@lifcura.com"
+      }
+    ],
     "sameAs": [
       "https://www.linkedin.com/company/lifcura",
-      "https://twitter.com/lifcura"
+      "https://twitter.com/lifcura",
+      "https://www.facebook.com/lifcura",
+      "https://www.instagram.com/lifcura"
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "IN"
+      "addressCountry": "IN",
+      "addressRegion": "Your State",
+      "addressLocality": "Your City"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Medical Products Catalog",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Therapeutic Solutions",
+            "category": "Medical Equipment"
+          }
+        }
+      ]
     }
   });
 };
@@ -56,6 +86,32 @@ export const trackPageView = (page) => {
       page_path: page
     });
   }
+};
+
+// Create FAQ Schema
+export const createFAQStructuredData = (faqs) => {
+  return generateStructuredData("FAQPage", {
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  });
+};
+
+// Create Breadcrumb Schema
+export const createBreadcrumbStructuredData = (breadcrumbs) => {
+  return generateStructuredData("BreadcrumbList", {
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  });
 };
 
 // Meta tag validation

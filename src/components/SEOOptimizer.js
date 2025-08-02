@@ -7,7 +7,10 @@ const SEOOptimizer = ({
   keywords = "medical products, healthcare, therapeutic solutions, medical equipment, pharmaceuticals, LifCura, medical manufacturing, healthcare export",
   image = "https://lifcura.com/iconlifcura.png",
   url = "https://lifcura.com",
-  type = "website"
+  type = "website",
+  structuredData = null,
+  breadcrumbs = null,
+  article = null
 }) => {
   return (
     <Helmet>
@@ -43,6 +46,41 @@ const SEOOptimizer = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      
+      {/* Enhanced SEO Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="theme-color" content="#1a936f" />
+      <meta name="msapplication-TileColor" content="#1a936f" />
+      
+      {/* Article-specific meta tags */}
+      {article && (
+        <>
+          <meta property="article:author" content={article.author} />
+          <meta property="article:published_time" content={article.publishedTime} />
+          <meta property="article:modified_time" content={article.modifiedTime} />
+          <meta property="article:section" content={article.section} />
+          {article.tags && article.tags.map(tag => (
+            <meta key={tag} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {structuredData}
+        </script>
+      )}
+      
+      {/* Breadcrumb Structured Data */}
+      {breadcrumbs && (
+        <script type="application/ld+json">
+          {breadcrumbs}
+        </script>
+      )}
     </Helmet>
   );
 };
