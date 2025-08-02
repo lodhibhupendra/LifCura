@@ -5,11 +5,38 @@ import "./ContactSection.css";
 function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3500);
+    const form = e.target;
+    const data = {
+      name: form[0].value,
+      email: form[1].value,
+      subject: form[2].value,
+      message: form[3].value,
+    };
+  
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await res.json();
+      
+      if (res.ok && result.success) {
+        setSubmitted(true);
+        form.reset();
+        setTimeout(() => setSubmitted(false), 3500);
+      } else {
+        alert(result.message || 'Message failed to send.');
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      alert('There was an error sending your message. Please try again.');
+    }
   };
+  
 
   return (
     <section className="contact-section premium-bg" id="contact">

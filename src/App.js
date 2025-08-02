@@ -1,4 +1,5 @@
 import React from 'react';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Particles from 'react-tsparticles';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -11,11 +12,24 @@ import { medicalProducts } from './data/medicalProductsData';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ExportSection from './components/ExportSection';
+import SEOOptimizer from './components/SEOOptimizer';
+import GoogleAnalytics from './components/GoogleAnalytics';
+import { createOrganizationStructuredData } from './utils/seoUtils';
 
 function App() {
   return (
-    <div style={{position: 'relative', zIndex: 1}}>
-      <Particles
+    <HelmetProvider>
+      <SEOOptimizer />
+      <GoogleAnalytics trackingId={process.env.REACT_APP_GA_TRACKING_ID} />
+      
+      <Helmet>
+        <script type="application/ld+json">
+          {createOrganizationStructuredData()}
+        </script>
+      </Helmet>
+      
+      <div style={{position: 'relative', zIndex: 1}}>
+        <Particles
         id="tsparticles"
         options={{
           background: { color: { value: "#f8fafc" } },
@@ -43,23 +57,23 @@ function App() {
           width: "100vw",
           height: "100vh"
         }}
-      />
-      <div style={{position: 'relative', zIndex: 1}}>
-        <Header />
-        <HeroSection />
-        <AboutSection />
-        <TherapySection />
-        <ManufacturingSection />
-        <ResearchSection />
-        <ExportSection />
-        <ProductCard products={medicalProducts} />
-        <ContactSection />
+        />
+        <div style={{position: 'relative', zIndex: 1}}>
+          <Header />
+          <HeroSection />
+          <AboutSection />
+          <TherapySection />
+          <ManufacturingSection />
+          <ResearchSection />
+          <ExportSection />
+          <ProductCard products={medicalProducts} />
+          <ContactSection />
+          <Footer />
         
-        <Footer />
         
-        
+        </div>
       </div>
-    </div>
+    </HelmetProvider>
   );
 }
 

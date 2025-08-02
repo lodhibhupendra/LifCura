@@ -1,8 +1,11 @@
 import zenatcImg from '../assets/ProductsImg/zenatc-150.jpeg';
-
-// ✅ Export the array so it can be used elsewhere
+import aciser from '../assets/ProductsImg/aciser-40.jpeg';
+import amazilox from '../assets/ProductsImg/amazilox-250mg.jpeg';
+import despata from '../assets/ProductsImg/despata.jpeg';
+import robam from '../assets/ProductsImg/robam-d.jpeg';
+import zoviact from '../assets/ProductsImg/zoviact.jpeg';
 export const medicalProducts = [
-  // Gynae (Gynecology)
+  
   {
     id: 1,
     name: "Dydrogesterone (Duphaston)",
@@ -1080,7 +1083,71 @@ export const medicalProducts = [
     inStock: true,
     price: 0,
     category: "Injection"
+  },
+
+  {
+    id: 90,
+    name: "Aciser 40",
+    strength: "40 mg",
+    form: "Tablet",
+    section: "Gastroenterology",
+    description: "Aciser 40 mg Tablet used to reduce stomach acid.",
+    image: aciser,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  {
+    id: 91,
+    name: "Amazilox 250mg",
+    strength: "250 mg",
+    form: "Capsule",
+    section: "Antibiotic",
+    description: "Amazilox 250 mg Capsule used to treat bacterial infections.",
+    image: amazilox,
+    inStock: true,
+    price: 0,
+    category: "Capsule"
+  },
+  {
+    id: 92,
+    name: "Despata",
+    strength: "NA",
+    form: "Tablet",
+    section: "Pain Relief",
+    description: "Despata Tablet used for the treatment of pain and inflammation.",
+    image: despata,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+  
+  {
+    id: 93,
+    name: "Robam-D",
+    strength: "NA",
+    form: "Tablet",
+    section: "Gastroenterology",
+    description: "Robam-D Tablet used for acid reflux and related conditions.",
+    image: robam,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
+  },
+
+  {
+    id: 94,
+    name: "Zoviact",
+    strength: "NA",
+    form: "Tablet",
+    section: "Anti-Infective",
+    description: "Zoviact Tablet used for treating infections.",
+    image: zoviact,
+    inStock: true,
+    price: 0,
+    category: "Tablet"
   }
+
 ];
   
 
