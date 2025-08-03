@@ -13,6 +13,41 @@ import Pregabalin from '../assets/ProductsImg/Pregabalin.png';
 import Sertraline from '../assets/ProductsImg/Sertraline.png';
 import Clobazam from '../assets/ProductsImg/Clobazam.png';
 import CholecalciferolCalcirol from '../assets/ProductsImg/CholecalciferolCalcirol.png';
+import Glimepiride from '../assets/ProductsImg/Glimepiride.jpeg';
+import Depagliflozin from '../assets/ProductsImg/Depagliflozin.jpeg';
+import Rosuvastation from '../assets/ProductsImg/Rosuvastation.jpeg';
+import Aceclofenac from '../assets/ProductsImg/Aceclofenac.jpeg';
+import Acyclovir from '../assets/ProductsImg/Acyclovir.jpeg';
+import Amlodipine from '../assets/ProductsImg/Amlodipine.jpeg';
+import Amoxicillin from '../assets/ProductsImg/Amoxicillin.jpeg';
+import Atenolol from '../assets/ProductsImg/Atenolol.jpeg';
+
+import Azithromycin from '../assets/ProductsImg/Azithromycin.jpeg';
+import Cefixime from '../assets/ProductsImg/Cefixime.jpeg';
+import Cefpodoxime from '../assets/ProductsImg/Cefpodoxime.jpeg';
+import Calcium from '../assets/ProductsImg/Calcium.jpeg';
+import Capecitabine from '../assets/ProductsImg/Capecitabine.jpeg';
+import Clobetasol from '../assets/ProductsImg/Clobetasol.jpeg';
+import Dutasteride from '../assets/ProductsImg/Dutasteride.jpeg';
+import Esomeprazole from '../assets/ProductsImg/Esomeprazole.jpeg';
+import Etoricoxib from '../assets/ProductsImg/Etoricoxib.jpeg';
+import Favipiravir from '../assets/ProductsImg/Favipiravir.jpeg';
+import Finasteride from '../assets/ProductsImg/Finasteride.jpeg';
+import Furosemide from '../assets/ProductsImg/Furosemide.jpeg';
+import Ketoconazole from '../assets/ProductsImg/Ketoconazole.jpeg';
+import Letrozole from '../assets/ProductsImg/Letrozole.jpeg';
+import Metformin from '../assets/ProductsImg/Metformin.jpeg';
+import Oseltamivir from '../assets/ProductsImg/Oseltamivir.jpeg';
+import Pantoprazole from '../assets/ProductsImg/Pantoprazole.jpeg';
+import Permethrin from '../assets/ProductsImg/Permethrin.jpeg';
+import Rabeprazole from '../assets/ProductsImg/Rabeprazole.jpeg';
+import Sucralfate from '../assets/ProductsImg/Sucralfate.jpeg';
+import Tamoxifen from '../assets/ProductsImg/Tamoxifen.jpeg';
+import Tamsulosin from '../assets/ProductsImg/Tamsulosin.jpeg';
+import Telmisartan from '../assets/ProductsImg/Telmisartan.jpeg';
+import Teneligliptin from '../assets/ProductsImg/Teneligliptin.jpeg';
+import Terbinafine from '../assets/ProductsImg/Terbinafine.jpeg';
+import Valacyclovir from '../assets/ProductsImg/Valacyclovir.jpeg';
 
 
 
@@ -129,7 +164,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Gynecology",
     description: "Letrozole 2.5 mg Tablet",
-    image: zenatcImg,
+    image: Letrozole,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -299,7 +334,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Orthopedic",
     description: "Calcium + Vitamin D3 (Shelcal) 500 mg + 250 IU Tablet",
-    image: zenatcImg,
+    image: Calcium,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -311,7 +346,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Orthopedic",
     description: "Etoricoxib (Nucoxia) 60 mg / 90 mg / 120 mg Tablet",
-    image: zenatcImg,
+    image: Etoricoxib,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -323,7 +358,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Orthopedic",
     description: "Aceclofenac + Paracetamol 100 mg + 325 mg Tablet",
-    image: zenatcImg,
+    image: Aceclofenac,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -372,7 +407,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Cardiac",
     description: "Telmisartan 40 mg / 80 mg Tablet",
-    image: zenatcImg,
+    image: Telmisartan,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -384,7 +419,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Cardiac",
     description: "Amlodipine 5 mg / 10 mg Tablet",
-    image: zenatcImg,
+    image: Amlodipine,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -396,7 +431,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Cardiac",
     description: "Atenolol 25 mg / 50 mg Tablet",
-    image: zenatcImg,
+    image: Atenolol,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -408,7 +443,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Cardiac",
     description: "Rosuvastatin 10 mg / 20 mg Tablet",
-    image: zenatcImg,
+    image: Rosuvastation,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -469,7 +504,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Diabetes",
     description: "Metformin 500 mg / 1000 mg Tablet",
-    image: zenatcImg,
+    image: Metformin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -481,7 +516,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Diabetes",
     description: "Glimepiride 1 mg / 2 mg Tablet",
-    image: zenatcImg,
+    image: Glimepiride,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -493,7 +528,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Diabetes",
     description: "Teneligliptin 20 mg Tablet",
-    image: zenatcImg,
+    image: Teneligliptin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -505,7 +540,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Diabetes",
     description: "Dapagliflozin 10 mg Tablet",
-    image: zenatcImg,
+    image: Depagliflozin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -566,7 +601,7 @@ export const medicalProducts = [
     form: "Tablet / Injection",
     section: "Gastroenterology",
     description: "Pantoprazole 40 mg Tablet / Injection",
-    image: zenatcImg,
+    image: Pantoprazole,
     inStock: true,
     price: 0,
     category: "Tablet / Injection"
@@ -578,7 +613,7 @@ export const medicalProducts = [
     form: "Capsule",
     section: "Gastroenterology",
     description: "Rabeprazole + Domperidone 20 mg + 30 mg Capsule",
-    image: zenatcImg,
+    image: Rabeprazole,
     inStock: true,
     price: 0,
     category: "Capsule"
@@ -590,7 +625,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Gastroenterology",
     description: "Esomeprazole 40 mg Tablet",
-    image: zenatcImg,
+    image: Esomeprazole,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -602,7 +637,7 @@ export const medicalProducts = [
     form: "Syrup",
     section: "Gastroenterology",
     description: "Sucralfate + Oxetacaine 1 gm + 10 mg / 5 ml Syrup",
-    image: zenatcImg,
+    image: Sucralfate,
     inStock: true,
     price: 0,
     category: "Syrup"
@@ -663,7 +698,7 @@ export const medicalProducts = [
     form: "Cream",
     section: "Dermatology",
     description: "Clobetasol Propionate 0.05% Cream",
-    image: zenatcImg,
+    image: Clobetasol,
     inStock: true,
     price: 0,
     category: "Cream"
@@ -675,7 +710,7 @@ export const medicalProducts = [
     form: "Shampoo",
     section: "Dermatology",
     description: "Ketoconazole 2% Shampoo",
-    image: zenatcImg,
+    image: Ketoconazole,
     inStock: true,
     price: 0,
     category: "Shampoo"
@@ -687,7 +722,7 @@ export const medicalProducts = [
     form: "Lotion",
     section: "Dermatology",
     description: "Permethrin 5% Lotion",
-    image: zenatcImg,
+    image: Permethrin,
     inStock: true,
     price: 0,
     category: "Lotion"
@@ -699,7 +734,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Dermatology",
     description: "Terbinafine 250 mg Tablet",
-    image: zenatcImg,
+    image: Terbinafine,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -772,7 +807,7 @@ export const medicalProducts = [
     form: "Capsule",
     section: "Urology / Nephrology",
     description: "Tamsulosin 0.4 mg Capsule",
-    image: zenatcImg,
+    image: Tamsulosin,
     inStock: true,
     price: 0,
     category: "Capsule"
@@ -784,7 +819,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Urology / Nephrology",
     description: "Finasteride 1 mg / 5 mg Tablet",
-    image: zenatcImg,
+    image: Finasteride,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -796,7 +831,7 @@ export const medicalProducts = [
     form: "Capsule",
     section: "Urology / Nephrology",
     description: "Dutasteride 0.5 mg Capsule",
-    image: zenatcImg,
+    image: Dutasteride,
     inStock: true,
     price: 0,
     category: "Capsule"
@@ -808,7 +843,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Urology / Nephrology",
     description: "Furosemide 40 mg Tablet",
-    image: zenatcImg,
+    image: Furosemide,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -857,7 +892,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antibiotics",
     description: "Amoxicillin + Clavulanic Acid 500 mg + 125 mg Tablet",
-    image: zenatcImg,
+    image: Amoxicillin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -869,7 +904,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antibiotics",
     description: "Azithromycin 250 mg / 500 mg Tablet",
-    image: zenatcImg,
+    image: Azithromycin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -881,7 +916,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antibiotics",
     description: "Cefixime 200 mg Tablet",
-    image: zenatcImg,
+    image: Cefixime,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -893,7 +928,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antibiotics",
     description: "Cefpodoxime 200 mg Tablet",
-    image: zenatcImg,
+    image: Cefpodoxime,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -978,7 +1013,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antiviral",
     description: "Acyclovir 400 mg / 800 mg Tablet",
-    image: zenatcImg,
+    image: Acyclovir,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -990,7 +1025,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antiviral",
     description: "Valacyclovir 500 mg / 1000 mg Tablet",
-    image: zenatcImg,
+    image: Valacyclovir,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -1002,7 +1037,7 @@ export const medicalProducts = [
     form: "Capsule",
     section: "Antiviral",
     description: "Oseltamivir 75 mg Capsule",
-    image: zenatcImg,
+    image: Oseltamivir,
     inStock: true,
     price: 0,
     category: "Capsule"
@@ -1014,7 +1049,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Antiviral",
     description: "Favipiravir 200 mg / 400 mg Tablet",
-    image: zenatcImg,
+    image: Favipiravir,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -1051,7 +1086,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Oncology",
     description: "Letrozole 2.5 mg Tablet",
-    image: zenatcImg,
+    image: Letrozole,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -1075,7 +1110,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Oncology",
     description: "Tamoxifen 10 mg / 20 mg Tablet",
-    image: zenatcImg,
+    image: Tamoxifen,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -1087,7 +1122,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Oncology",
     description: "Capecitabine 500 mg Tablet",
-    image: zenatcImg,
+    image: Capecitabine,
     inStock: true,
     price: 0,
     category: "Tablet"
