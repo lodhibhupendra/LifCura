@@ -3,7 +3,63 @@ import aciser from '../assets/ProductsImg/aciser-40.jpeg';
 import amazilox from '../assets/ProductsImg/amazilox-250mg.jpeg';
 import despata from '../assets/ProductsImg/despata.jpeg';
 import robam from '../assets/ProductsImg/robam-d.jpeg';
+import ProgesteroneImg from '../assets/ProductsImg/Progesterone.jpeg';
 import zoviact from '../assets/ProductsImg/zoviact.jpeg';
+import DydrogesteroneImg from '../assets/ProductsImg/Dydrogesterone.jpeg';
+import FolicAcidImg from '../assets/ProductsImg/FolicAcid.jpeg';
+import Clonazepam from '../assets/ProductsImg/ClonazepamEscitopram.png';
+import GabapentinMethylcobalaminImg from '../assets/ProductsImg/GabapentinMethylcobalamin.png';
+import Pregabalin from '../assets/ProductsImg/Pregabalin.png';
+import Sertraline from '../assets/ProductsImg/Sertraline.png';
+import Clobazam from '../assets/ProductsImg/Clobazam.png';
+import CholecalciferolCalcirol from '../assets/ProductsImg/CholecalciferolCalcirol.png';
+
+
+
+import cottonRollImg from '../assets/ProductsImg/CottonRolls.jpeg';
+import gauzePadImg from '../assets/ProductsImg/GauzePads.jpeg';
+import adhesiveBandages from '../assets/ProductsImg/Adhesive.jpeg';
+import surgicalTapeImg from '../assets/ProductsImg/SurgicalTape.jpeg';
+import alcoholSwabImg from '../assets/ProductsImg/AlcoholSwabs.jpeg';
+import antisepticImg from '../assets/ProductsImg/AntisepticSolution.jpeg';
+import dressingTrayImg from '../assets/ProductsImg/DressingTray.jpeg';
+import crepeBandageImg from '../assets/ProductsImg/ElasticBandages(Crepebandage).jpeg';
+import forcepsImg from '../assets/ProductsImg/Forceps.jpeg';
+import scalpelImg from '../assets/ProductsImg/ScalpelHandle+Blades.jpeg';
+import retractorImg from '../assets/ProductsImg/Retractors.jpeg';
+import syringeImg from '../assets/ProductsImg/Syringes(2ml,5ml,10ml,50ml).jpeg';
+import needleImg from '../assets/ProductsImg/Needles(Varioussizes).jpeg';
+import kidneyTrayImg from '../assets/ProductsImg/KidneyTray.jpeg';
+import gallipotImg from '../assets/ProductsImg/Gallipot.jpeg';
+import sterilizationPouchImg from '../assets/ProductsImg/SterilizationPouch.jpeg';
+import capMaskImg from '../assets/ProductsImg/SurgicalCap&Mask.jpeg';
+import gownImg from '../assets/ProductsImg/Apron:DisposableGown.jpeg';
+import ambuBagImg from '../assets/ProductsImg/AmbuBag(ManualResuscitator).jpeg';
+import burnSheetImg from '../assets/ProductsImg/BurnSheet.jpeg';
+import cervicalCollarImg from '../assets/ProductsImg/CervicalCollar.jpeg';
+import tourniquetImg from '../assets/ProductsImg/Tourniquet.jpeg';
+import firstAidImg from '../assets/ProductsImg/FirstAidBox(complete).jpeg';
+import eyeWashImg from '../assets/ProductsImg/EyeWashBottle.jpeg';
+import thermalBlanketImg from '../assets/ProductsImg/ThermalBlanket.jpeg';
+import splintImg from '../assets/ProductsImg/Splints(forfracturesupport).jpeg';
+import iceHotPackImg from '../assets/ProductsImg/Ice:HotPack.jpeg';
+import testTubeImg from '../assets/ProductsImg/TestTubes.jpeg';
+import urineContainerImg from '../assets/ProductsImg/Urine Sample Container.jpeg';
+import vacutainerImg from '../assets/ProductsImg/BloodCollection Tubes(Vacutainer).jpeg';
+import lancetImg from '../assets/ProductsImg/Lancet.jpeg';
+import glucoStripsImg from '../assets/ProductsImg/GlucometerStrips.jpeg';
+import dropperImg from '../assets/ProductsImg/Dropper.jpeg';
+import testTubeRackImg from '../assets/ProductsImg/TestTubeRack.jpeg';
+import beakerImg from '../assets/ProductsImg/BeakerMeasuringCup.jpeg';
+import faceMaskImg from '../assets/ProductsImg/FaceMasks(3ply).jpeg';
+import shoeCoverImg from '../assets/ProductsImg/ShoeCovers.jpeg';
+import headCapImg from '../assets/ProductsImg/HeadCaps.jpeg';
+import apronImg from '../assets/ProductsImg/Aprons(Plasticornon-woven).jpeg';
+import towelImg from '../assets/ProductsImg/DisposableTowels.jpeg';
+import needleCutterImg from '../assets/ProductsImg/NeedleCutter.jpeg';
+import syringeDestroyerImg from '../assets/ProductsImg/SyringeDestroyer.jpeg';
+import slideImg from '../assets/ProductsImg/MicroscopicSlides.jpeg';
+import SurgicalGloves from '../assets/ProductsImg/disposablehandgloves.jpeg';
 export const medicalProducts = [
   
   {
@@ -13,7 +69,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Gynecology",
     description: "Dydrogesterone (Duphaston) 10 mg Tablet",
-    image: zenatcImg,
+    image: DydrogesteroneImg,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -25,7 +81,7 @@ export const medicalProducts = [
     form: "Softgel/Injection",
     section: "Gynecology",
     description: "Progesterone (Susten) 200 mg Softgel/Injection",
-    image: zenatcImg,
+    image: ProgesteroneImg,
     inStock: true,
     price: 0,
     category: "Softgel/Injection"
@@ -37,7 +93,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Gynecology",
     description: "Folic Acid 5 mg Tablet",
-    image: zenatcImg,
+    image: FolicAcidImg,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -123,7 +179,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Clonazepam + Escitalopram 0.5 mg + 10 mg Tablet",
-    image: zenatcImg,
+    image: Clonazepam,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -135,7 +191,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Gabapentin + Methylcobalamin 300 mg + 500 mcg Tablet",
-    image: zenatcImg,
+    image: GabapentinMethylcobalaminImg,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -147,7 +203,7 @@ export const medicalProducts = [
     form: "Capsule",
     section: "Neuro / Psychiatry",
     description: "Pregabalin 75 mg / 150 mg Capsule",
-    image: zenatcImg,
+    image: Pregabalin,
     inStock: true,
     price: 0,
     category: "Capsule"
@@ -159,7 +215,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Sertraline 50 mg / 100 mg Tablet",
-    image: zenatcImg,
+    image: Sertraline,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -171,7 +227,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Clobazam 10 mg / 20 mg Tablet",
-    image: zenatcImg,
+    image: Clobazam,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -231,7 +287,7 @@ export const medicalProducts = [
     form: "Sachet",
     section: "Orthopedic",
     description: "Cholecalciferol (Calcirol) 60,000 IU Sachet",
-    image: zenatcImg,
+    image: CholecalciferolCalcirol,
     inStock: true,
     price: 0,
     category: "Sachet"
@@ -1146,9 +1202,541 @@ export const medicalProducts = [
     inStock: true,
     price: 0,
     category: "Tablet"
-  }
+  },
 
-];
+
+    {
+      id: 95,
+      name: "Cotton Rolls",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Cotton Rolls for wound care and dressing",
+      image: cottonRollImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 96,
+      name: "Gauze Pads",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile Gauze Pads for wound dressing",
+      image: gauzePadImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 97,
+      name: "Adhesive Bandages",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Adhesive Bandages for minor cuts and injuries",
+      image: adhesiveBandages,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 98,
+      name: "Surgical Tape",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Medical-grade Surgical Tape for dressing",
+      image: surgicalTapeImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 99,
+      name: "Alcohol Swabs",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile Alcohol Swabs for disinfecting skin",
+      image: alcoholSwabImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 100,
+      name: "Antiseptic Solution (Betadine, Savlon)",
+      strength: "",
+      form: "Liquid",
+      section: "equipment",
+      description: "Topical antiseptic solution for wound cleaning",
+      image: antisepticImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 101,
+      name: "Dressing Tray",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile Dressing Tray set",
+      image: dressingTrayImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 102,
+      name: "Elastic Bandages (Crepe bandage)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Elastic support bandages for injury",
+      image: crepeBandageImg,
+      inStock: true,
+      price: 0,
+      category: "Wound Care"
+    },
+    {
+      id: 103,
+      name: "Forceps",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Surgical forceps for tissue handling",
+      image: forcepsImg,
+      inStock: true,
+      price: 0,
+      category: "Surgical Tools"
+    },
+    {
+      id: 104,
+      name: "Scalpel Handle + Blades",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Scalpel handle with detachable blades",
+      image: scalpelImg,
+      inStock: true,
+      price: 0,
+      category: "Surgical Tools"
+    },
+    {
+      id: 105,
+      name: "Retractors",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Surgical retractors for wound exposure",
+      image: retractorImg,
+      inStock: true,
+      price: 0,
+      category: "Surgical Tools"
+    },
+    {
+      id: 106,
+      name: "Syringes (2ml, 5ml, 10ml, 50ml)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile syringes of various sizes",
+      image: syringeImg,
+      inStock: true,
+      price: 0,
+      category: "Injection Supplies"
+    },
+    {
+      id: 107,
+      name: "Needles (Various sizes)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable hypodermic needles",
+      image: needleImg,
+      inStock: true,
+      price: 0,
+      category: "Injection Supplies"
+    },
+    {
+      id: 108,
+      name: "Kidney Tray",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Stainless steel kidney tray for medical use",
+      image: kidneyTrayImg,
+      inStock: true,
+      price: 0,
+      category: "Surgical Tools"
+    },
+    {
+      id: 109,
+      name: "Gallipot",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Small sterilizable bowl for liquids",
+      image: gallipotImg,
+      inStock: true,
+      price: 0,
+      category: "Surgical Tools"
+    },
+    {
+      id: 110,
+      name: "Sterilization Pouch",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Self-sealing pouch for autoclaving instruments",
+      image: sterilizationPouchImg,
+      inStock: true,
+      price: 0,
+      category: "Sterilization"
+    },
+    {
+      id: 111,
+      name: "Surgical Cap & Mask",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable surgical caps and masks",
+      image: capMaskImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 112,
+      name: "Apron / Disposable Gown",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Protective aprons and gowns for procedures",
+      image: gownImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 113,
+      name: "Ambu Bag (Manual Resuscitator)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Manual device for respiratory resuscitation",
+      image: ambuBagImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 114,
+      name: "Burn Sheet",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile sheet for burn wound care",
+      image: burnSheetImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 115,
+      name: "Cervical Collar",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Supportive collar for neck injuries",
+      image: cervicalCollarImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 116,
+      name: "Tourniquet",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Used to stop bleeding during emergencies",
+      image: tourniquetImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 117,
+      name: "First Aid Box (complete)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Complete first aid kit for medical emergencies",
+      image: firstAidImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 118,
+      name: "Eye Wash Bottle",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile solution bottle for eye irrigation",
+      image: eyeWashImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 119,
+      name: "Thermal Blanket",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Emergency foil blanket to retain body heat",
+      image: thermalBlanketImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 120,
+      name: "Splints (for fracture support)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Support devices for bone fractures",
+      image: splintImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 121,
+      name: "Ice/Hot Pack",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Reusable packs for hot/cold therapy",
+      image: iceHotPackImg,
+      inStock: true,
+      price: 0,
+      category: "Emergency"
+    },
+    {
+      id: 122,
+      name: "Test Tubes",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Glass/plastic tubes for laboratory tests",
+      image: testTubeImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 123,
+      name: "Urine Sample Container",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Sterile container for urine collection",
+      image: urineContainerImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 124,
+      name: "Blood Collection Tubes (Vacutainer)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Vacutainer tubes for blood collection",
+      image: vacutainerImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 125,
+      name: "Lancet (for blood sugar)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable lancet for pricking finger",
+      image: lancetImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 126,
+      name: "Glucometer Strips",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Testing strips for glucometer",
+      image: glucoStripsImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 127,
+      name: "Microscopic Slides",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Glass slides for microscopic analysis",
+      image: slideImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id:   128,
+      name: "Dropper",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Small liquid transfer device",
+      image: dropperImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 129,
+      name: "Test Tube Rack",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Rack for holding multiple test tubes",
+      image: testTubeRackImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 130,
+      name: "Beaker/Measuring Cup",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Measurement tools for lab use",
+      image: beakerImg,
+      inStock: true,
+      price: 0,
+      category: "Lab"
+    },
+    {
+      id: 131,
+      name: "Face Masks (3-ply, N95)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable protective face masks",
+      image: faceMaskImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 132,
+      name: "Shoe Covers",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable shoe protectors",
+      image: shoeCoverImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 133,
+      name: "Head Caps",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable surgical head caps",
+      image: headCapImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 134,
+      name: "Aprons (Plastic or non-woven)",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Disposable protective aprons",
+      image: apronImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 135,
+      name: "Disposable Towels",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Single-use paper/cloth towels",
+      image: towelImg,
+      inStock: true,
+      price: 0,
+      category: "Disposables"
+    },
+    {
+      id: 136,
+      name: "Syringe Destroyer",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Device to safely destroy used syringes",
+      image: syringeDestroyerImg,
+      inStock: true,
+      price: 0,
+      category: "Waste Disposal"
+    },
+    {
+      id: 137,
+      name: "Needle Cutter",
+      strength: "",
+      form: "",
+      section: "equipment",
+      description: "Device for safe disposal of needles",
+      image: needleCutterImg,
+      inStock: true,
+      price: 0,
+      category: "Waste Disposal"
+    },
+    {
+      id: 138,
+      name: "Surgical Gloves",
+      strength: "",
+      form: "Disposable",
+      section: "equipment",
+      description: "Sterile latex surgical gloves for clinical use",
+      image: SurgicalGloves,
+      inStock: true,
+      price: 0,
+      category: "Disposable"
+    }
+  ];
+  
+
+
   
 
 
