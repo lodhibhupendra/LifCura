@@ -7,12 +7,13 @@ import ProgesteroneImg from '../assets/ProductsImg/Progesterone.jpeg';
 import zoviact from '../assets/ProductsImg/zoviact.jpeg';
 import DydrogesteroneImg from '../assets/ProductsImg/Dydrogesterone.jpeg';
 import FolicAcidImg from '../assets/ProductsImg/FolicAcid.jpeg';
-import Clonazepam from '../assets/ProductsImg/ClonazepamEscitopram.png';
-import GabapentinMethylcobalaminImg from '../assets/ProductsImg/GabapentinMethylcobalamin.png';
-import Pregabalin from '../assets/ProductsImg/Pregabalin.png';
-import Sertraline from '../assets/ProductsImg/Sertraline.png';
-import Clobazam from '../assets/ProductsImg/Clobazam.png';
-import CholecalciferolCalcirol from '../assets/ProductsImg/CholecalciferolCalcirol.png';
+import FerrousAscorbateFolicAcid from '../assets/ProductsImg/FerrousAscorbateFolicAcid.png';
+import ClonazepamEscitopram from '../assets/ProductsImg/CholecalciferolCalcirol.jpeg';
+import GabapentinMethylcobalamin from '../assets/ProductsImg/GabapentinMethylcobalamin.jpeg';
+import Pregabalin from '../assets/ProductsImg/Pregabalin.jpeg';
+import Sertraline from '../assets/ProductsImg/Sertraline.jpeg';
+import Clobazam from '../assets/ProductsImg/aciser-40.jpeg';
+import CholecalciferolCalcirol from '../assets/ProductsImg/Calcium.jpeg';
 import Glimepiride from '../assets/ProductsImg/Glimepiride.jpeg';
 import Depagliflozin from '../assets/ProductsImg/Depagliflozin.jpeg';
 import Rosuvastation from '../assets/ProductsImg/Rosuvastation.jpeg';
@@ -48,6 +49,7 @@ import Telmisartan from '../assets/ProductsImg/Telmisartan.jpeg';
 import Teneligliptin from '../assets/ProductsImg/Teneligliptin.jpeg';
 import Terbinafine from '../assets/ProductsImg/Terbinafine.jpeg';
 import Valacyclovir from '../assets/ProductsImg/Valacyclovir.jpeg';
+import Anastrozole from '../assets/ProductsImg/Anastrozole.jpeg';
 
 
 
@@ -140,7 +142,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Gynecology",
     description: "Ferrous Ascorbate + Folic Acid 100 mg + 1.5 mg Tablet",
-    image: zenatcImg,
+    image: FerrousAscorbateFolicAcid,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -214,7 +216,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Clonazepam + Escitalopram 0.5 mg + 10 mg Tablet",
-    image: Clonazepam,
+    image: ClonazepamEscitopram,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -226,7 +228,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Neuro / Psychiatry",
     description: "Gabapentin + Methylcobalamin 300 mg + 500 mcg Tablet",
-    image: GabapentinMethylcobalaminImg,
+    image: GabapentinMethylcobalamin,
     inStock: true,
     price: 0,
     category: "Tablet"
@@ -1098,7 +1100,7 @@ export const medicalProducts = [
     form: "Tablet",
     section: "Oncology",
     description: "Anastrozole 1 mg Tablet",
-    image: zenatcImg,
+    image: Anastrozole,
     inStock: true,
     price: 0,
     category: "Tablet"
