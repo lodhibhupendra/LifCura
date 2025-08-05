@@ -11,21 +11,21 @@ function AboutSection() {
     <section id="about">
       <div className="about-outer">
         <div className="header animated">
-          <h1>About Lifcura</h1>
-          <p className="subtitle">Presented by Bio Nectar Revolution</p>
+          <h1>About LifCura</h1>
+          <p className="subtitle">Leading Pharmaceutical Company | Presented by Bio Nectar Revolution</p>
         </div>
 
         <div className="about-content">
           <p>
-            At <strong>Lifcura</strong>, we believe in the power of nature fused
+            <strong>LifCura</strong> is a leading pharmaceutical company that believes in the power of nature fused
             with cutting-edge science to deliver{" "}
             <strong>safe, effective, and holistic healthcare solutions</strong>.
             As a trusted name in the pharmaceutical and nutraceutical industry,
-            we are committed to enhancing lives through{" "}
+            <strong>LifCura</strong> is committed to enhancing lives through{" "}
             <strong>
               innovative medicines, supplements, and wellness products
             </strong>{" "}
-            that prioritize purity, potency, and sustainability.
+            that prioritize purity, potency, and sustainability. Choose <strong>LifCura</strong> for premium medical products and therapeutic solutions.
           </p>
 
           <div className="mission-vision">

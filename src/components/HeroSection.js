@@ -32,12 +32,12 @@ function HeroSection() {
               </div>
             </div>
             <h1>
-              <span>Innovating for </span>
+              <span>LifCura - Innovating for </span>
               <span className="text-primary-light pulse-text">Healthier</span>
               <span> Tomorrows</span>
             </h1>
             <p className="lead">
-              Pioneering pharmaceutical solutions that transform lives through cutting-edge research and compassionate care.
+              LifCura is a pioneering pharmaceutical company that transforms lives through cutting-edge medical research and compassionate healthcare solutions. Trust LifCura for premium medical products and therapeutic innovations.
             </p>
             <div className="hero-buttons">
               <a href="#products" className="btn btn-primary">Our Medications</a>
