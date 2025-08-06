@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/iconlifcura.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#1a936f" />
     
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="LifCura | Leading pharmaceutical company specializing in medical products, therapeutic solutions, and healthcare equipment. LifCura is trusted by healthcare professionals worldwide for quality medical manufacturing and export."
-    />
-    <meta name="keywords" content="LifCura, lifcura, www.lifcura.com, lifcura.com, medical products, pharmaceutical company, healthcare solutions, therapeutic medicines, medical equipment, LifCura pharmaceuticals, medical manufacturing, healthcare export, Bio Nectar Revolution" />
+    <!-- Primary Meta Tags -->
+    <title>LifCura | Premium Medical Products & Healthcare Solutions</title>
+    <meta name="title" content="LifCura | Premium Medical Products & Healthcare Solutions" />
+    <meta name="description" content="LifCura | Leading pharmaceutical company specializing in medical products, therapeutic solutions, and healthcare equipment. Trusted by healthcare professionals worldwide." />
+    <meta name="keywords" content="LifCura, lifcura, www.lifcura.com, lifcura.com, medical products, pharmaceutical company, healthcare solutions, therapeutic medicines, medical equipment, LifCura pharmaceuticals, medical manufacturing, healthcare export, Bio Nectar Revolution, medical supplies, healthcare products, pharmaceutical solutions, medical devices" />
     <meta name="author" content="LifCura" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     
-    <!-- Domain and URL Optimization -->
-    <link rel="canonical" href="https://lifcura.com" />
-    <link rel="alternate" href="https://www.lifcura.com" />
-    <meta name="google-site-verification" content="" />
-    <meta name="msvalidate.01" content="" />
+    <!-- Canonical & Alternate URLs -->
+    <link rel="canonical" href="https://lifcura.com/" />
+    <link rel="alternate" hreflang="en" href="https://lifcura.com/" />
+    <link rel="alternate" href="https://www.lifcura.com/" hreflang="x-default" />
     
-    <!-- OpenGraph Meta Tags for Social Media -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lifcura.com/" />
     <meta property="og:title" content="LifCura | Premium Medical Products & Healthcare Solutions" />
     <meta property="og:description" content="LifCura - Leading pharmaceutical company specializing in medical products, therapeutic solutions, and healthcare equipment. Trusted by healthcare professionals worldwide." />
-    <meta property="og:image" content="%PUBLIC_URL%/iconlifcura.png" />
-    <meta property="og:url" content="https://lifcura.com" />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
     <meta property="og:site_name" content="LifCura" />
+    <meta property="og:locale" content="en_US" />
     
-    <!-- Twitter Card Meta Tags -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://lifcura.com/" />
     <meta name="twitter:title" content="LifCura | Premium Medical Products & Healthcare Solutions" />
     <meta name="twitter:description" content="LifCura - Leading pharmaceutical company specializing in medical products, therapeutic solutions, and healthcare equipment." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/iconlifcura.png" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-card.jpg" />
+    <meta name="twitter:site" content="@lifcura" />
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#1a936f" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="LifCura" />
+    <meta name="apple-mobile-web-app-title" content="LifCura" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
+    <meta name="theme-color" content="#1a936f" />
+    
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LifCura",
+      "url": "https://lifcura.com",
+      "logo": "%PUBLIC_URL%/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/lifcura",
+        "https://twitter.com/lifcura",
+        "https://www.linkedin.com/company/lifcura",
+        "https://www.instagram.com/lifcura"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+91-XXXXXXXXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Hindi"]
+      }]
+    }
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -50,10 +93,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>LifCura | Leading Pharmaceutical Company - Medical Products & Healthcare Solutions</title>
+
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <strong>We're sorry but LifCura doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <p>LifCura is a leading pharmaceutical company specializing in medical products, therapeutic solutions, and healthcare equipment. Visit us at <a href="https://lifcura.com">lifcura.com</a> for more information.</p>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
