@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutSection.css";
 import founderImg from '../assets/Founder.jpeg';
-import directorImg from '../assets/Director.jpeg';
+import directorImg from '../assets/Director.jpg';
 import BhupendraImg from '../assets/bhupendra.png';
 import PrachiImg from '../assets/Prachi.jpg';
 import ChetnaImg from '../assets/Chetan.jpg';
