@@ -61,13 +61,13 @@ function App() {
         <div style={{position: 'relative', zIndex: 1}}>
           <Header />
           <HeroSection />
-          <AboutSection />
           <TherapySection />
           <ManufacturingSection />
           <ResearchSection />
           <ExportSection />
           <ProductCard products={medicalProducts} />
           <ContactSection />
+          <AboutSection />
           <Footer />
         
         
