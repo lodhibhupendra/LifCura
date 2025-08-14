@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="main-header">
       <div className="header-container">
-        <div className="header-logo" onDoubleClick={() => { window.location.href = '/admin'; }}>
+        <div className="header-logo" onDoubleClick={() => { window.location.href = '/admin/login'; }}>
           <img src={logo} alt="LifCura Logo" />
           <div>
             <div className="header-company">LifCura</div>
