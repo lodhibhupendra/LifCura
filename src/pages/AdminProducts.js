@@ -128,12 +128,19 @@ export default function AdminProducts() {
           };
           xhr.onload = () => {
             try {
-              const res = JSON.parse(xhr.responseText);
-              if (xhr.status >= 200 && xhr.status < 300 && res.url) {
+              const status = xhr.status;
+              const raw = xhr.responseText || '';
+              let res = null;
+              try {
+                res = raw ? JSON.parse(raw) : null;
+              } catch (_) {
+                res = null;
+              }
+              if (status >= 200 && status < 300 && res && res.url) {
                 imageFileId = res.fileId || '';
                 resolve(res.url);
               } else {
-                const msg = res.error || 'Upload failed';
+                const msg = (res && (res.error || res.message)) || `Upload failed (${status})`;
                 setErrorMsg(msg);
                 reject(new Error(msg));
               }
