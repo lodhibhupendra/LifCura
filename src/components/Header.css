@@ -268,4 +268,34 @@
   .header-mobile-nav {
     display: flex;
   }
-} 
+}
+
+/* Admin login: small, subtle pill */
+.admin-login {
+  margin-left: 8px;
+  color: #1f2937;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: background 0.18s, color 0.18s, border-color 0.18s, box-shadow 0.18s;
+}
+.admin-login:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+@media (max-width: 900px) {
+  .admin-login {
+    display: none; /* keep header clean on mobile; admin via direct route */
+  }
+}
