@@ -40,7 +40,8 @@ export default function AdminProducts() {
   }, [items, search]);
 
   // Backend upload API (Supabase via our server)
-  const UPLOAD_API = process.env.REACT_APP_UPLOAD_API || 'http://localhost:4000';
+  // Ensure no trailing slash to avoid //upload
+  const UPLOAD_API = (process.env.REACT_APP_UPLOAD_API || 'http://localhost:4000').replace(/\/+$/, '');
 
   const handleFileChange = (e) => {
     const file = e.target.files?.[0] || null;
