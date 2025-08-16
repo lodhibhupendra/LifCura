@@ -1,0 +1,28 @@
+{
+  "name": "LifCura",
+  "short_name": "LifCura",
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1a936f",
+  "background_color": "#ffffff",
+  "description": "LifCura | Premium Medical Products & Healthcare Solutions",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

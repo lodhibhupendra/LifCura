@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { addDoc, collection, deleteDoc, doc, getDocs, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
+import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function AdminProducts() {
   const [items, setItems] = useState([]);
@@ -20,6 +22,7 @@ export default function AdminProducts() {
   const [errorMsg, setErrorMsg] = useState('');
   const [previewUrl, setPreviewUrl] = useState('');
   const [search, setSearch] = useState('');
+  const [showDeleteAnim, setShowDeleteAnim] = useState(false);
 
   // Derived filtered items based on search query
   const filteredItems = useMemo(() => {
@@ -97,6 +100,7 @@ export default function AdminProducts() {
     setLoading(true);
     setErrorMsg('');
     setUploadProgress(0);
+    const isCreating = !editingId; // determine up-front
     try {
       // Basic validations
       const nameOk = name.trim().length > 0;
@@ -228,6 +232,8 @@ export default function AdminProducts() {
   };
 
   const remove = async (p) => {
+    // Show delete animation immediately on click
+    setShowDeleteAnim(true);
     // Try deleting the image from ImageKit first (if we have fileId)
     try {
       if (p.imageFileId) {
@@ -240,11 +246,29 @@ export default function AdminProducts() {
     } catch (_) { /* best-effort */ }
     await deleteDoc(doc(db, 'products', p.id));
     await load();
+    // Play success animation briefly
+    setTimeout(() => setShowDeleteAnim(false), 1500);
   };
 
   return (
     <div style={styles.page}>
       <div style={styles.container}>
+        {showDeleteAnim && (
+          <div
+            style={{
+              position: 'fixed', right: 16, bottom: 16, zIndex: 50,
+              pointerEvents: 'none'
+            }}
+          >
+            <div style={{ width: 140, height: 140 }}>
+              <DotLottieReact
+                src="https://lottie.host/256fb29b-adf2-44f5-83be-8f5460f6acd9/vsONSvuNF9.lottie"
+                loop
+                autoplay
+              />
+            </div>
+          </div>
+        )}
         <h2 style={styles.title}>Admin: Products</h2>
         {errorMsg && (
           <div style={styles.alertError}>{errorMsg}</div>

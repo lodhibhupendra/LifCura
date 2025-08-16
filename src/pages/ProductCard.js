@@ -6,10 +6,60 @@ import useWindowWidth from '../utils/useWindowWidth';
 
 
 const ProductCard = ({ products = [] }) => {
+  // Dynamically compute header height to avoid overlap on mobile fixed controls
+  useEffect(() => {
+    const computeHeights = () => {
+      const header = document.querySelector('.main-header') ||
+        document.querySelector('header') ||
+        document.querySelector('.site-header') ||
+        document.querySelector('#header');
+      const h = header ? Math.ceil(header.getBoundingClientRect().height) : 64;
+      document.documentElement.style.setProperty('--header-height', `${h}px`);
+
+      const controls = document.querySelector('.advanced-controls');
+      const ch = controls ? Math.ceil(controls.getBoundingClientRect().height) : 96;
+      document.documentElement.style.setProperty('--controls-height', `${ch}px`);
+    };
+
+    computeHeights();
+    const t = setTimeout(computeHeights, 200); // re-measure after layout/fonts
+    window.addEventListener('resize', computeHeights);
+    window.addEventListener('orientationchange', computeHeights);
+
+    // Observe live size changes of header and controls (e.g., mobile menu open)
+    let headerObserver, controlsObserver;
+    const headerEl = document.querySelector('.main-header') ||
+      document.querySelector('header') ||
+      document.querySelector('.site-header') ||
+      document.querySelector('#header');
+    const controlsEl = document.querySelector('.advanced-controls');
+    if (window.ResizeObserver) {
+      if (headerEl) {
+        headerObserver = new ResizeObserver(computeHeights);
+        headerObserver.observe(headerEl);
+      }
+      if (controlsEl) {
+        controlsObserver = new ResizeObserver(computeHeights);
+        controlsObserver.observe(controlsEl);
+      }
+    }
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener('resize', computeHeights);
+      window.removeEventListener('orientationchange', computeHeights);
+      if (headerObserver && headerEl) headerObserver.disconnect();
+      if (controlsObserver && controlsEl) controlsObserver.disconnect();
+    };
+  }, []);
+
   const [activeFilter, setActiveFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [modalProduct, setModalProduct] = useState(null);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreBtnRef = useRef(null);
+  const moreMenuRef = useRef(null);
 
   // Simulate loading
   useEffect(() => {
@@ -17,19 +67,38 @@ const ProductCard = ({ products = [] }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Get all unique sections
+  // Helper: search match
+  const matchesSearch = (product) => {
+    const q = searchQuery.toLowerCase();
+    if (!q) return true;
+    const inName = (product.name || '').toLowerCase().includes(q);
+    const inDesc = (product.description || '').toLowerCase().includes(q);
+    return inName || inDesc;
+  };
+
+  // Get all unique sections (stable, includes 'All')
   const allSections = ['All', ...new Set(products.map(product => product.section))];
+
+  // Live counts based on current search (ignoring activeFilter so user sees potential results)
+  const searchMatchedProducts = products.filter(p => matchesSearch(p));
+  const sectionCounts = searchMatchedProducts.reduce((acc, p) => {
+    const key = p.section || 'General';
+    acc[key] = (acc[key] || 0) + 1;
+    return acc;
+  }, {});
+  const totalCount = searchMatchedProducts.length;
 
   // Filter logic
   const filteredProducts = products.filter(product => {
-    const matchesFilter = activeFilter === 'All' || product.section === activeFilter;
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         (product.description && product.description.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesFilter && matchesSearch;
+    const bySection = activeFilter === 'All' || product.section === activeFilter;
+    return bySection && matchesSearch(product);
   });
 
+  // Sort logic removed; keep original order (relevance)
+  const sortedProducts = filteredProducts;
+
   // Group by section
-  const groupedProducts = filteredProducts.reduce((acc, product) => {
+  const groupedProducts = sortedProducts.reduce((acc, product) => {
     const section = product.section || 'General';
     if (!acc[section]) acc[section] = [];
     acc[section].push(product);
@@ -71,6 +140,31 @@ const ProductCard = ({ products = [] }) => {
 
   const windowWidth = useWindowWidth();
   const isMobile = windowWidth <= 600;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Close More menu on outside click
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onClick = (e) => {
+      const btn = moreBtnRef.current;
+      const menu = moreMenuRef.current;
+      if (btn && btn.contains(e.target)) return;
+      if (menu && menu.contains(e.target)) return;
+      setMoreOpen(false);
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, [moreOpen]);
+
+  // Price formatter (IN locale)
+  const formatPrice = (val) => {
+    const num = val !== undefined && val !== null ? Number(val) : 0;
+    try {
+      return new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(num);
+    } catch (_) {
+      return num;
+    }
+  };
 
   if (isLoading) {
     return (
@@ -84,47 +178,143 @@ const ProductCard = ({ products = [] }) => {
 
   return (
     <div className="product-app-container" id="products">
-      {/* Products Header */}
-      <header className="app-header">
-        <h1>Our Products</h1>
-      </header>
+      {/* Controls + Title Area */}
 
       {/* Advanced Filter Controls */}
       <div className="advanced-controls">
-        <div className="search-bar">
-          <FiSearch className="search-icon" />
-          <input 
-            type="text" 
-            placeholder="Search products..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-
-        {isMobile ? (
-          <div className="filter-dropdown-container">
-            <select
-              className="filter-dropdown"
-              value={activeFilter}
-              onChange={e => setActiveFilter(e.target.value)}
-            >
-              {allSections.map(section => (
-                <option key={section} value={section}>{section}</option>
-              ))}
-            </select>
+        <div className="controls-bar">
+          <div className="controls-left">
+            <h2 className="controls-title">Our <span className="gradient-text">Products</span></h2>
+            <p className="controls-sub">Explore our active product range.</p>
           </div>
-        ) : (
-          <div className="filter-tabs">
-            {allSections.map(section => (
-              <button
-                key={section}
-                className={`filter-tab ${activeFilter === section ? 'active' : ''}`}
-                onClick={() => setActiveFilter(section)}
+          <div className="controls-right">
+            {/* View toggle removed per request */}
+            <div className="search-bar">
+              <FiSearch className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Search products..." 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            {/* Sort dropdown removed per request */}
+            {!isMobile && (
+              <>
+              <span className="filters-label" aria-hidden="true">Sections</span>
+              <div className="filter-tabs">
+                {(() => {
+                  // Show only 'All' as chip; move every other section to More
+                  const sections = allSections;
+                  const visible = ['All'];
+                  const overflow = sections.filter(s => s !== 'All');
+                  return (
+                    <>
+                      {visible.map(section => (
+                        <button
+                          key={section}
+                          className={`filter-tab ${activeFilter === section ? 'active' : ''}`}
+                          onClick={() => setActiveFilter(section)}
+                        >
+                          <span className="tab-label">{section}</span>
+                          <span className="active-indicator" style={{opacity: activeFilter === section ? 1 : 0}}></span>
+                          <span className="count-badge">
+                            {section === 'All' ? totalCount : (sectionCounts[section] || 0)}
+                          </span>
+                        </button>
+                      ))}
+                      {overflow.length > 0 && (
+                        <div className="more-wrap" style={{position:'relative'}}>
+                          <button
+                            ref={moreBtnRef}
+                            className={`filter-tab more-btn ${moreOpen ? 'active' : ''}`}
+                            onClick={() => setMoreOpen(o => !o)}
+                            aria-haspopup="menu"
+                            aria-expanded={moreOpen}
+                            aria-label="Browse sections"
+                            title="Browse sections"
+                          >
+                            Sections ▾
+                          </button>
+                          {moreOpen && (
+                            <div ref={moreMenuRef} className="more-menu" role="menu">
+                              {overflow.map(section => (
+                                <button
+                                  key={section}
+                                  className={`more-item ${activeFilter === section ? 'active' : ''}`}
+                                  role="menuitem"
+                                  onClick={() => { setActiveFilter(section); setMoreOpen(false); }}
+                                >
+                                  <span className="label">{section}</span>
+                                  <span className="count">{sectionCounts[section] || 0}</span>
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
+              </div>
+              </>
+            )}
+          </div>
+        </div>
+        {isMobile && (
+          <div className="filter-dropdown-container">
+            {isMobile ? (
+              <div className="mobile-filter">
+                <button
+                  type="button"
+                  className="mobile-filter-button"
+                  aria-haspopup="listbox"
+                  aria-expanded={mobileMenuOpen}
+                  onClick={() => setMobileMenuOpen(v => !v)}
+                >
+                  <span className="mobile-filter-label">{activeFilter}</span>
+                  <span className="mobile-filter-caret" aria-hidden>▾</span>
+                </button>
+                {mobileMenuOpen && (
+                  <ul
+                    className="mobile-filter-menu"
+                    role="listbox"
+                    aria-label="Filter by section"
+                  >
+                    {allSections.map(section => (
+                      <li key={section} role="option" aria-selected={activeFilter === section}>
+                        <button
+                          type="button"
+                          className={`mobile-filter-option ${activeFilter === section ? 'is-active' : ''}`}
+                          onClick={() => {
+                            setActiveFilter(section);
+                            setMobileMenuOpen(false);
+                          }}
+                        >
+                          {section}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <select
+                className="filter-dropdown"
+                value={activeFilter}
+                onChange={e => setActiveFilter(e.target.value)}
+                aria-label="Filter by section"
               >
-                {section}
-                {activeFilter === section && <span className="active-indicator"></span>}
-              </button>
-            ))}
+                {allSections.map(section => {
+                  const count = section === 'All' ? totalCount : (sectionCounts[section] || 0);
+                  return (
+                    <option key={section} value={section}>
+                      {section} ({count})
+                    </option>
+                  );
+                })}
+              </select>
+            )}
           </div>
         )}
       </div>
@@ -133,7 +323,6 @@ const ProductCard = ({ products = [] }) => {
       {Object.keys(groupedProducts).length > 0 ? (
         Object.entries(groupedProducts).map(([section, items]) => {
           const isExpanded = expandedSections.includes(section);
-          const visibleItems = isExpanded ? items : items.slice(0, 4);
           return (
             <section
               key={section}
@@ -152,37 +341,35 @@ const ProductCard = ({ products = [] }) => {
                   overflow: 'hidden',
                 }}
               >
-                {visibleItems.map((product) => (
-                  <article
-                    key={product.id}
-                    className="product-card"
-                  >
-                    <div className="product-badge">New</div>
+                <div className="products-grid">
+                {items.slice(0, isExpanded ? items.length : 4).map((product) => (
+                  <article className="product-card" key={product.id}>
                     <div className="product-image-container">
+                      <div className="product-badge-pill">{product.category || 'New'}</div>
                       <img 
                         src={product.image || getProductImage(product.name)} 
                         alt={product.name}
                         loading="lazy"
                       />
+                      <button className="quick-view-btn" onClick={() => setModalProduct(product)}>
+                        <FiEye /> Quick view
+                      </button>
                     </div>
                     <div className="product-details">
                       <h3>{product.name}</h3>
                       <div className="description">{product.description}</div>
                       <div className="price-badge">
-                        ₹ {product.price !== undefined && product.price !== null ? product.price : 0}
+                        ₹ {formatPrice(product.price)}
                       </div>
                       <div className="product-meta">
                         {product.category && <span className="category">{product.category}</span>}
                         {product.inStock && <span className="stock">In Stock</span>}
                       </div>
-                      <div className="product-actions">
-                        <button className="view-btn" onClick={() => setModalProduct(product)}>
-                          <FiEye /> View
-                        </button>
-                      </div>
+                      <div className="product-actions"></div>
                     </div>
                   </article>
                 ))}
+              </div>
               </div>
               {/* Show More/Less Button */}
               {items.length > 4 && (
@@ -227,7 +414,7 @@ const ProductCard = ({ products = [] }) => {
           <div style={{textAlign:'center', position:'relative'}}>
             <img src={modalProduct.image} alt={modalProduct.name} style={{width:'100%',maxWidth:260,borderRadius:12,marginBottom:18,marginTop:8, boxShadow:'0 2px 12px #4895ef22'}} />
             <h2 style={{marginBottom:8, fontWeight:700, fontSize:'1.35rem'}}>{modalProduct.name}</h2>
-            <div style={{color:'#2563eb',fontWeight:700,marginBottom:8,fontSize:'1.15rem'}}>₹ {modalProduct.price !== undefined && modalProduct.price !== null ? modalProduct.price : 0}</div>
+            <div style={{color:'#2563eb',fontWeight:800,marginBottom:14,fontSize:'1.15rem'}}>₹ {formatPrice(modalProduct.price)}</div>
             <div style={{marginBottom:10, color:'#444', fontSize:'1.05rem'}}>{modalProduct.description}</div>
             {modalProduct.category && <div style={{marginBottom:6, color:'#4895ef',fontWeight:600}}>{modalProduct.category}</div>}
             {modalProduct.section && <div style={{marginBottom:6, color:'#888'}}>{modalProduct.section}</div>}

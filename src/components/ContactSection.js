@@ -98,7 +98,10 @@ function ContactSection() {
       </div>
       <div className="contact-container">
         <div className="contact-info-card premium">
-          <img src={logo} alt="LifCura Logo" className="contact-logo" />
+          <div style={{display:'flex', alignItems:'center', gap:12, marginBottom:12}}>
+            <img src={logo} alt="LifCura Logo" className="contact-logo" />
+            <span style={{fontSize:'1.6rem', fontWeight:800, color:'#17624b', letterSpacing:'0.5px'}}>LifCura</span>
+          </div>
           <div className="contact-tagline">Nurturing Health, Globally</div>
           <ul className="contact-info-list">
             <li><i className="fas fa-map-marker-alt"></i> <span style={{fontWeight:600}}>TIRCHHI GHAZIPUR 275202</span></li>
