@@ -8,6 +8,15 @@ const imagekit = new ImageKit({
   urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
 });
 
+// Configure body parser for Vercel
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+  },
+};
+
 export default async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -28,88 +37,21 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'ImageKit configuration missing' });
     }
 
-    // Parse the multipart form data
-    const contentType = req.headers['content-type'];
-    if (!contentType || !contentType.includes('multipart/form-data')) {
-      return res.status(400).json({ error: 'Content-Type must be multipart/form-data' });
+    // For Vercel, we'll use a different approach - base64 upload
+    const { fileData, fileName, fileType } = req.body;
+
+    if (!fileData) {
+      return res.status(400).json({ error: 'No file data provided' });
     }
 
-    // Get the boundary from content-type header
-    const boundary = contentType.split('boundary=')[1];
-    if (!boundary) {
-      return res.status(400).json({ error: 'Invalid multipart boundary' });
-    }
-
-    // Parse multipart data manually (simple implementation)
-    const body = req.body;
-    const chunks = [];
-    
-    // Convert body to buffer if it's not already
-    let buffer;
-    if (Buffer.isBuffer(body)) {
-      buffer = body;
-    } else if (typeof body === 'string') {
-      buffer = Buffer.from(body, 'binary');
-    } else {
-      return res.status(400).json({ error: 'Invalid request body' });
-    }
-
-    // Simple multipart parsing - find file content
-    const boundaryBuffer = Buffer.from(`--${boundary}`);
-    const parts = [];
-    let start = 0;
-    
-    while (true) {
-      const boundaryIndex = buffer.indexOf(boundaryBuffer, start);
-      if (boundaryIndex === -1) break;
-      
-      if (start > 0) {
-        parts.push(buffer.slice(start, boundaryIndex));
-      }
-      start = boundaryIndex + boundaryBuffer.length;
-    }
-
-    // Find the file part
-    let fileBuffer = null;
-    let fileName = 'upload';
-    
-    for (const part of parts) {
-      const partStr = part.toString('binary');
-      if (partStr.includes('Content-Disposition: form-data') && partStr.includes('filename=')) {
-        // Extract filename
-        const filenameMatch = partStr.match(/filename="([^"]+)"/);
-        if (filenameMatch) {
-          fileName = filenameMatch[1];
-        }
-        
-        // Find where headers end and file content begins
-        const headerEndIndex = part.indexOf('\r\n\r\n');
-        if (headerEndIndex !== -1) {
-          fileBuffer = part.slice(headerEndIndex + 4);
-          // Remove trailing CRLF
-          if (fileBuffer.length >= 2 && fileBuffer[fileBuffer.length - 2] === 0x0D && fileBuffer[fileBuffer.length - 1] === 0x0A) {
-            fileBuffer = fileBuffer.slice(0, -2);
-          }
-          break;
-        }
-      }
-    }
-
-    if (!fileBuffer || fileBuffer.length === 0) {
-      return res.status(400).json({ error: 'No file found in request' });
-    }
-
-    // Validate file type by checking magic bytes
-    const isImage = (
-      (fileBuffer[0] === 0xFF && fileBuffer[1] === 0xD8) || // JPEG
-      (fileBuffer[0] === 0x89 && fileBuffer[1] === 0x50) || // PNG
-      (fileBuffer[0] === 0x47 && fileBuffer[1] === 0x49) || // GIF
-      (fileBuffer[0] === 0x52 && fileBuffer[1] === 0x49)    // WEBP
-    );
-
-    if (!isImage) {
+    // Validate file type
+    if (!fileType || !fileType.startsWith('image/')) {
       return res.status(400).json({ error: 'Only image files are allowed' });
     }
+
+    // Convert base64 to buffer
+    const base64Data = fileData.replace(/^data:image\/[a-z]+;base64,/, '');
+    const fileBuffer = Buffer.from(base64Data, 'base64');
 
     // Check file size (5MB limit)
     if (fileBuffer.length > 5 * 1024 * 1024) {
@@ -117,7 +59,7 @@ export default async function handler(req, res) {
     }
 
     // Generate safe filename
-    const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+    const safeName = (fileName || 'upload').replace(/[^a-zA-Z0-9._-]/g, '_');
     const finalFileName = `${Date.now()}-${uuidv4()}-${safeName}`;
 
     // Upload to ImageKit

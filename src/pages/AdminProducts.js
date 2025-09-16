@@ -117,47 +117,96 @@ export default function AdminProducts() {
       let imageUrl = '';
       let imageFileId = '';
       if (imageFile) {
-        // Upload to our backend (Supabase uploader)
+        // Convert file to base64 for serverless function
+        const fileDataUrl = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onload = (e) => resolve(e.target.result);
+          reader.readAsDataURL(imageFile);
+        });
+
+        // Upload to our backend
         imageUrl = await new Promise((resolve, reject) => {
-          const xhr = new XMLHttpRequest();
-          xhr.open('POST', `${UPLOAD_API}/upload`);
-          xhr.upload.onprogress = (e) => {
-            if (e.lengthComputable) {
-              const pct = Math.round((e.loaded / e.total) * 100);
-              setUploadProgress(pct);
-            }
+          setUploadProgress(10);
+          
+          const uploadData = {
+            fileData: fileDataUrl,
+            fileName: imageFile.name,
+            fileType: imageFile.type
           };
-          xhr.onerror = () => {
-            const msg = 'Image upload failed (network error)';
-            setErrorMsg(msg);
-            reject(new Error(msg));
-          };
-          xhr.onload = () => {
-            try {
-              const status = xhr.status;
-              const raw = xhr.responseText || '';
-              let res = null;
-              try {
-                res = raw ? JSON.parse(raw) : null;
-              } catch (_) {
-                res = null;
-              }
-              if (status >= 200 && status < 300 && res && res.url) {
+
+          const isProduction = process.env.NODE_ENV === 'production';
+          
+          if (isProduction) {
+            // Use JSON for serverless functions
+            fetch(`${UPLOAD_API}/upload`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(uploadData)
+            })
+            .then(response => {
+              setUploadProgress(90);
+              return response.json();
+            })
+            .then(res => {
+              if (res.url) {
                 imageFileId = res.fileId || '';
+                setUploadProgress(100);
                 resolve(res.url);
               } else {
-                const msg = (res && (res.error || res.message)) || `Upload failed (${status})`;
+                const msg = res.error || 'Upload failed';
                 setErrorMsg(msg);
                 reject(new Error(msg));
               }
-            } catch (e) {
-              setErrorMsg('Invalid server response');
-              reject(e);
-            }
-          };
-          const form = new FormData();
-          form.append('file', imageFile);
-          xhr.send(form);
+            })
+            .catch(error => {
+              const msg = 'Image upload failed (network error)';
+              setErrorMsg(msg);
+              reject(new Error(msg));
+            });
+          } else {
+            // Use FormData for local server
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', `${UPLOAD_API}/upload`);
+            xhr.upload.onprogress = (e) => {
+              if (e.lengthComputable) {
+                const pct = Math.round((e.loaded / e.total) * 100);
+                setUploadProgress(pct);
+              }
+            };
+            xhr.onerror = () => {
+              const msg = 'Image upload failed (network error)';
+              setErrorMsg(msg);
+              reject(new Error(msg));
+            };
+            xhr.onload = () => {
+              try {
+                const status = xhr.status;
+                const raw = xhr.responseText || '';
+                let res = null;
+                try {
+                  res = raw ? JSON.parse(raw) : null;
+                } catch (_) {
+                  res = null;
+                }
+                if (status >= 200 && status < 300 && res && res.url) {
+                  imageFileId = res.fileId || '';
+                  resolve(res.url);
+                } else {
+                  const msg = (res && (res.error || res.message)) || `Upload failed (${status})`;
+                  setErrorMsg(msg);
+                  reject(new Error(msg));
+                }
+              } catch (e) {
+                setErrorMsg('Invalid server response');
+                reject(e);
+              }
+            };
+            const form = new FormData();
+            form.append('file', imageFile);
+            xhr.send(form);
+          }
         });
       }
       if (editingId) {
