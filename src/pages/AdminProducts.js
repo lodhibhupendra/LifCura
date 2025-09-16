@@ -42,9 +42,10 @@ export default function AdminProducts() {
     });
   }, [items, search]);
 
-  // Backend upload API (Supabase via our server)
-  // Ensure no trailing slash to avoid //upload
-  const UPLOAD_API = (process.env.REACT_APP_UPLOAD_API || 'http://localhost:4000').replace(/\/+$/, '');
+  // Backend upload API - use serverless functions in production, local server in development
+  const UPLOAD_API = process.env.NODE_ENV === 'production' 
+    ? '/api' // Vercel serverless functions
+    : (process.env.REACT_APP_UPLOAD_API || 'http://localhost:4000').replace(/\/+$/, '');
 
   const handleFileChange = (e) => {
     const file = e.target.files?.[0] || null;
@@ -178,7 +179,10 @@ export default function AdminProducts() {
         // If replaced image, attempt to delete old file
         if (imageUrl && prevFileId && prevImageUrl !== imageUrl) {
           try {
-            await fetch(`${UPLOAD_API}/image`, {
+            const deleteEndpoint = process.env.NODE_ENV === 'production' 
+              ? `${UPLOAD_API}/delete-image` 
+              : `${UPLOAD_API}/image`;
+            await fetch(deleteEndpoint, {
               method: 'DELETE',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ fileId: prevFileId })
@@ -237,7 +241,10 @@ export default function AdminProducts() {
     // Try deleting the image from ImageKit first (if we have fileId)
     try {
       if (p.imageFileId) {
-        await fetch(`${UPLOAD_API}/image`, {
+        const deleteEndpoint = process.env.NODE_ENV === 'production' 
+          ? `${UPLOAD_API}/delete-image` 
+          : `${UPLOAD_API}/image`;
+        await fetch(deleteEndpoint, {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fileId: p.imageFileId })

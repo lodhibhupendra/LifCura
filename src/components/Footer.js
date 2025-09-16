@@ -31,8 +31,8 @@ function Footer() {
       <div className="footer-container premium">
         <div className="footer-col footer-about premium">
           <img src={logo} alt="LifCura Logo" className="footer-logo premium" />
-          <div className="footer-company premium">LifCura</div>
-          <div className="footer-tagline premium">Nurturing Health</div>
+          {/* <div className="footer-company premium">LifCura</div>
+          <div className="footer-tagline premium">Nurturing Health</div> */}
           <p className="footer-desc premium">
             <span role="img" aria-label="leaf">🌱</span> Empowering lives with innovative, quality healthcare. <br />WHO-GMP certified, trusted globally.
           </p>

@@ -12,8 +12,8 @@ function Header() {
         <div className="header-logo" onDoubleClick={() => { window.location.href = '/admin/login'; }}>
           <img src={logo} alt="LifCura Logo" />
           <div>
-            <div className="header-company">LifCura</div>
-            <div className="header-tagline">Nurturing Health</div>
+            {/* <div className="header-company">LifCura</div>
+            <div className="header-tagline">Nurturing Health</div> */}
           </div>
         </div>
         <nav className="header-nav">

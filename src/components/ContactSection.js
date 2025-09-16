@@ -100,7 +100,7 @@ function ContactSection() {
         <div className="contact-info-card premium">
           <div style={{display:'flex', alignItems:'center', gap:12, marginBottom:12}}>
             <img src={logo} alt="LifCura Logo" className="contact-logo" />
-            <span style={{fontSize:'1.6rem', fontWeight:800, color:'#17624b', letterSpacing:'0.5px'}}>LifCura</span>
+            {/* <span style={{fontSize:'1.6rem', fontWeight:800, color:'#17624b', letterSpacing:'0.5px'}}>LifCura</span> */}
           </div>
           <div className="contact-tagline">Nurturing Health, Globally</div>
           <ul className="contact-info-list">
